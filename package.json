@@ -9,8 +9,12 @@
     "export": "npm run build && next export"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.4.0",
+    "autoprefixer": "^9.8.6",
     "next": "9.5.1",
+    "postcss": "^7.0.32",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "tailwindcss": "^1.6.2"
   }
 }
