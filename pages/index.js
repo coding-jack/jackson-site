@@ -16,14 +16,14 @@ export default function Home() {
         </h1>
 
         <div className={styles.grid}>
-          <Link href="/dev" className={styles.card}>
+          <Link href="/dev">
             <a className={styles.card}>
               <h3>Dev Work &rarr;</h3>
               <p>Explore Jackson's Web Development Resume and Portfolio</p>
             </a>
           </Link>
 
-          <Link href="/music" className={styles.card}>
+          <Link href="/music">
             <a className={styles.card}>
               <h3>Music &rarr;</h3>
               <p>See what Jackson has been up to musically lately</p>

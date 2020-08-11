@@ -11,10 +11,17 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.4.0",
     "autoprefixer": "^9.8.6",
+    "axios": "^0.19.2",
     "next": "9.5.1",
     "postcss": "^7.0.32",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
     "tailwindcss": "^1.6.2"
+  },
+  "devDependencies": {
+    "redux-devtools": "^3.6.0"
   }
 }
