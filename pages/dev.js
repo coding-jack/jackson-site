@@ -5,21 +5,24 @@ import { useStore, connect } from "react-redux";
 const DevPage = () => {
   const { pages } = useStore().getState().wp
   const content = pages.filter((page) => page.slug === "dev")
-  const backgroundUrl = content[0].acf.featured_picture.link
-  const backgroundStyle = {
-    backgroundImage: `url(${backgroundUrl})`,
-  }
+  // const backgroundUrl = content[0].acf.featured_picture.link
+  // const backgroundStyle = {
+  //   backgroundImage: `url(${content[0].acf.featured_picture.link})`,
+  // }
 
   console.log(content)
-  console.log(backgroundStyle)
   return (
     <Layout className="dev">
-      <div className="flex justify-center items-center min-h-screen" style={backgroundStyle}>
-        <h1>Dev page</h1>
-      </div>
-      <div className="flex justify-center m-10">
-        <p>{content[0].acf.sections.about.description}</p>
-      </div>
+      {content[0] &&
+        <>
+          <div className="flex justify-center items-center min-h-screen">
+            <h1>Dev page</h1>
+          </div>
+          <div className="flex justify-center m-10">
+            <p>{content[0].acf.sections.about.description}</p>
+          </div>
+        </>
+      }
     </Layout>
   )
 }
