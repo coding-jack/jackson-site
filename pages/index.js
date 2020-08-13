@@ -10,17 +10,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <h1 className="text-6xl mt-0">Jackson Kaufman</h1>
         <div className={styles.grid}>
           <Link href="/dev">
             <a className={styles.card}>
               <h3>Dev Work &rarr;</h3>
-              <p>Explore Jackson's Web Development Resume and Portfolio</p>
+              <p>Explore Jackson's web development resume and portfolio</p>
             </a>
           </Link>
           <Link href="/music">
             <a className={styles.card}>
               <h3>Music &rarr;</h3>
-              <p>See what Jackson has been up to musically lately</p>
+              <p>See what Jackson has been up to musically</p>
             </a>
           </Link>
         </div>
