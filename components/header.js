@@ -10,11 +10,15 @@ export default function header() {
 
   return (
     <header className="flex justify-center fixed inset-x-0 top-0 bg-black bg-opacity-25">
-      <ul className="flex justify-center">
-        {Object.values(content[0].acf.sections).map((section, index) =>
-          <li className="mx-3" key={index}>{section.header}</li>
-        )}
-      </ul>
+      {content[0] &&
+        <>
+          <ul className="flex justify-center">
+            {Object.values(content[0].acf.sections).map((section, index) =>
+              <li className="mx-3" key={index}>{section.header}</li>
+            )}
+          </ul>
+        </>
+      }
     </header>
   )
 }

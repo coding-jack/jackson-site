@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from "../components/Layout";
 import { useStore, connect } from "react-redux";
+import Header from "../components/Header";
 
 const DevPage = () => {
   const { pages } = useStore().getState().wp
@@ -15,6 +16,7 @@ const DevPage = () => {
     <Layout className="dev">
       {content[0] &&
         <>
+          <Header />
           <div className="flex justify-center items-center min-h-screen">
             <h1>Dev page</h1>
           </div>
