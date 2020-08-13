@@ -9,12 +9,7 @@ export default function Home() {
         <title>Jackson Kaufman</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to Jackson's App
-        </h1>
-
         <div className={styles.grid}>
           <Link href="/dev">
             <a className={styles.card}>
@@ -22,7 +17,6 @@ export default function Home() {
               <p>Explore Jackson's Web Development Resume and Portfolio</p>
             </a>
           </Link>
-
           <Link href="/music">
             <a className={styles.card}>
               <h3>Music &rarr;</h3>
@@ -31,7 +25,6 @@ export default function Home() {
           </Link>
         </div>
       </main>
-
       <footer className={styles.footer}>
         Developed by Jackson Kaufman
       </footer>
