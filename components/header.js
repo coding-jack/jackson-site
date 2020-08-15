@@ -5,12 +5,13 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 
-export default function header() {
+function Header() {
   useGetWPPages();
   const { pages } = useStore().getState().wp
   const router = useRouter()
   const content = pages.filter((page) => page.slug === router.pathname.substr(1))
 
+  console.log(content)
   return (
     <header className="flex justify-center fixed inset-x-0 top-0 bg-black bg-opacity-25">
       {content[0] &&
@@ -29,3 +30,5 @@ export default function header() {
     </header>
   )
 }
+
+export default Header;

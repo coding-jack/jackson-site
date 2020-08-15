@@ -12,7 +12,6 @@ const DevPage = () => {
   //   backgroundImage: `url(${content[0].acf.featured_picture.link})`,
   // }
 
-  console.log(content)
   return (
     <Layout className="dev">
       {content[0] &&
