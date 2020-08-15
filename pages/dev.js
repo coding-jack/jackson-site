@@ -18,14 +18,15 @@ const DevPage = () => {
       {content[0] &&
         <>
           <Header />
-          <div className="flex justify-center items-center min-h-screen">
+          <div className="section justify-center">
             <h1>Dev page</h1>
           </div>
-          <div name="About" id="#About" className="flex justify-center flex-col text-center m-10">
+          {/* <img src={backgroundUrl} alt="" /> */}
+          <div name="About" id="#About" className="section flex-col text-center">
             <p>{content[0].acf.sections.about.header}</p>
             <p>{content[0].acf.sections.about.description}</p>
           </div>
-          <div name="Portfolio" id="#Portfolio" className="flex justify-center flex-col text-center m-10">
+          <div name="Portfolio" id="#Portfolio" className="section flex-col text-center m-10">
             <p>{content[0].acf.sections.portfolio.header}</p>
             <ul>
               {content[0].acf.sections.portfolio.wordpress.map((project, index) =>
@@ -35,13 +36,13 @@ const DevPage = () => {
               )}
             </ul>
           </div>
-          <div name="Experience" id="#Experience" className="flex justify-center flex-col text-center m-10">
+          <div name="Experience" id="#Experience" className="section flex-col text-center m-10">
             <p>{content[0].acf.sections.experience.header}</p>
           </div>
-          <div name="Education" id="#Education" className="flex justify-center flex-col text-center m-10">
+          <div name="Education" id="#Education" className="section flex-col text-center m-10">
             <p>{content[0].acf.sections.education.header}</p>
           </div>
-          <div name="Skills" id="#Skills" className="flex justify-center flex-col text-center m-10">
+          <div name="Skills" id="#Skills" className="section flex-col text-center m-10">
             <p>{content[0].acf.sections.skills.header}</p>
           </div>
         </>
