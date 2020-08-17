@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,5 +15,13 @@ html {
 }
 
 .section {
-  @apply flex items-center min-h-screen p-24
+  @apply flex items-center min-h-screen p-20
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 1.4rem;
 }

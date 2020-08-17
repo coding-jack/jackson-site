@@ -1,0 +1,11 @@
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0,0,0,0.80);
+}
+
+.text-glow {
+  text-shadow: 0px 2px 80px rgba(124, 255, 0, 0.72), 0px 4px 30px rgba(216, 255, 0, 0.6), 2px 4px 10px rgba(88, 179, 3, 0.7);
+}
+
+.text-xxs {
+  font-size: 0.65rem;
+}
