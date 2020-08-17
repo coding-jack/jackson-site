@@ -7,26 +7,98 @@ const MusicPage = () => {
   const { pages } = useStore().getState().wp
   const content = pages.filter((page) => page.slug === "music")
 
-  console.log(content)
+  console.log(content[0].acf.sections.gallery)
   return (
     <Layout className="music">
       {content[0] &&
         <>
           <Header />
-          <div name="About" id="#About" className="section justify-center about">
-            <h1>{content[0].acf.sections.about.header}</h1>
+          <div name="About" id="#About" className="section flex-col justify-center about">
+            <h2>{content[0].acf.sections.about.header}</h2>
+            <img src={content[0].acf.featured_picture.sizes.medium} alt="" />
+            <p>{content[0].acf.sections.about.description}</p>
           </div>
-          <div name="PsychedelicRock" id="#PsychedelicRock" className="section">
-            <h1>{content[0].acf.sections.shwarma.header}</h1>
+          <div name="PsychedelicRock" id="#PsychedelicRock" className="section flex-col">
+            <h2>{content[0].acf.sections.shwarma.header}</h2>
+            <p>{content[0].acf.sections.shwarma.description}</p>
+            <ul>
+              {content[0].acf.sections.shwarma.photos.map((photo, index) =>
+                <li key={index}>
+                  <img src={photo.sizes.medium} alt="" />
+                </li>
+              )}
+            </ul>
+            <ul>
+              {content[0].acf.sections.shwarma.videos.map((video, index) =>
+                <li key={index}>
+                  <span dangerouslySetInnerHTML={{ __html: video.video }} />
+                </li>
+              )}
+            </ul>
           </div>
-          <div name="FunFunkyFolk" id="#FunFunkyFolk" className="section">
-            <h1>{content[0].acf.sections.gb.header}</h1>
+          <div name="FunFunkyFolk" id="#FunFunkyFolk" className="section flex-col">
+            <h2>{content[0].acf.sections.gb.header}</h2>
+            <p>{content[0].acf.sections.gb.description}</p>
+            <ul>
+              {content[0].acf.sections.gb.photos.map((photo, index) =>
+                <li key={index}>
+                  <img src={photo.sizes.medium} alt="" />
+                </li>
+              )}
+            </ul>
+            <ul>
+              {content[0].acf.sections.gb.videos.map((video, index) =>
+                <li key={index}>
+                  <span dangerouslySetInnerHTML={{ __html: video.video }} />
+                </li>
+              )}
+            </ul>
           </div>
-          <div name="BoogieFunk" id="#BoogieFunk" className="section">
-            <h1>{content[0].acf.sections.sbc.header}</h1>
+          <div name="BoogieFunk" id="#BoogieFunk" className="section flex-col">
+            <h2>{content[0].acf.sections.sbc.header}</h2>
+            <p>{content[0].acf.sections.sbc.description}</p>
+            <ul>
+              {content[0].acf.sections.sbc.photos.map((photo, index) =>
+                <li key={index}>
+                  <img src={photo.sizes.medium} alt="" />
+                </li>
+              )}
+            </ul>
+            <ul>
+              {content[0].acf.sections.sbc.videos.map((video, index) =>
+                <li key={index}>
+                  <span dangerouslySetInnerHTML={{ __html: video.video }} />
+                </li>
+              )}
+            </ul>
           </div>
-          <div name="SideProjects" id="#SideProjects" className="section">
-            <h1>{content[0].acf.sections.other.header}</h1>
+          <div name="SideProjects" id="#SideProjects" className="section flex-col">
+            <h2>{content[0].acf.sections.other.header}</h2>
+            <p>{content[0].acf.sections.other.description}</p>
+            <ul>
+              {content[0].acf.sections.other.photos.map((photo, index) =>
+                <li key={index}>
+                  <img src={photo.sizes.medium} alt="" />
+                </li>
+              )}
+            </ul>
+            <ul>
+              {content[0].acf.sections.other.videos.map((video, index) =>
+                <li key={index}>
+                  <span dangerouslySetInnerHTML={{ __html: video.video }} />
+                </li>
+              )}
+            </ul>
+          </div>
+          <div name="PhotoGallery" id="#PhotoGallery" className="section flex-col">
+            <h2>{content[0].acf.sections.gallery.header}</h2>
+            <ul>
+              {content[0].acf.sections.gallery.gallery.map((photo, index) =>
+                <li key={index}>
+                  <img src={photo.sizes.medium} alt="" />
+                </li>
+              )}
+            </ul>
           </div>
         </>
       }
