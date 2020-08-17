@@ -9,6 +9,10 @@ body {
   @apply bg-secondary text-white
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .section {
   @apply flex items-center min-h-screen p-24
 }
