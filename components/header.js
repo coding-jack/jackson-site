@@ -10,6 +10,11 @@ function Header() {
   const { pages } = useStore().getState().wp
   const router = useRouter()
   const content = pages.filter((page) => page.slug === router.pathname.substr(1))
+  function removeSpace(prop) {
+    let str = prop
+    str = str.replace(/\s/g, '');
+    return str;
+  }
 
   console.log(content)
   return (
@@ -17,10 +22,15 @@ function Header() {
       {content[0] &&
         <>
           <ul className="flex justify-center">
+            <li className="mx-3">
+              <Link href="/">
+                <a>Home</a>
+              </Link>
+            </li>
             {Object.values(content[0].acf.sections).map((section, index) =>
               <li className="mx-3" key={index}>
-                <Link href={`#${section.header}`}>
-                  <a href={`#${section.header}`} >{section.header}</a>
+                <Link href={`#${removeSpace(section.header)}`}>
+                  <a>{section.header}</a>
                 </Link>
               </li>
             )}
