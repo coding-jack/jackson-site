@@ -7,7 +7,6 @@ const MusicPage = () => {
   const { pages } = useStore().getState().wp
   const content = pages.filter((page) => page.slug === "music")
 
-  console.log(content[0].acf.sections.gallery)
   return (
     <Layout className="music">
       {content[0] &&
