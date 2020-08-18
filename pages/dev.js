@@ -14,6 +14,7 @@ const DevPage = () => {
     autoplay: true,
     speed: 500,
     arrows: false,
+    pauseOnFocus: true,
     slidesToShow: 2,
     slidesToScroll: 2,
     className: 'hover-gradient',
@@ -52,10 +53,14 @@ const DevPage = () => {
             <p>{content[0].acf.sections.portfolio.description}</p>
             <Slider {...settings}>
               {content[0].acf.sections.portfolio.wordpress.map((project, index) =>
-                <div className="project-slide" index={index} key={index}>
-                  <img className="mx-auto" src={project.image.sizes.medium} alt="" />
-                  <h3>{project.image.title}</h3>
-                  <p>{project.image.description}</p>
+                <div className="project-slide p-6 cursor-pointer" index={index} key={index}>
+                  <a href={project.link}>
+                    <div className="project-wrap">
+                      <img className="mx-auto mb-6" src={project.image.sizes.medium} alt="" />
+                      <h3 className="mb-4">{project.image.title}</h3>
+                      <p className="px-6">{project.image.description}</p>
+                    </div>
+                  </a>
                 </div>
               )}
             </Slider>
