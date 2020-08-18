@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from "../components/Layout";
 import { useStore, connect } from "react-redux";
-import Header from "../components/header";
+import Header from "../components/Header";
 
 
 const DevPage = () => {
