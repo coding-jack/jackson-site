@@ -1,7 +1,7 @@
 import "../css/index.css";
 import { Provider } from 'react-redux';
 import store from '../redux/store';
-import Header from "../components/Header";
+import Header from "../components/header";
 
 
 function MyApp({ Component, pageProps }) {
