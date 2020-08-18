@@ -10,9 +10,9 @@ const DevPage = () => {
   const content = pages.filter((page) => page.slug === "dev")
   const settings = {
     dots: true,
-    infinite: false,
+    infinite: true,
     autoplay: true,
-    speed: 400,
+    speed: 500,
     arrows: false,
     slidesToShow: 2,
     slidesToScroll: 2,
