@@ -11,9 +11,7 @@ function Header() {
   const router = useRouter()
   const content = pages.filter((page) => page.slug === router.pathname.substr(1))
   function removeSpace(prop) {
-    let str = prop
-    str = str.replace(/\s/g, '');
-    return str;
+    return prop.replace(/\s/g, '');
   }
 
   return (

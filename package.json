@@ -12,15 +12,18 @@
     "@reduxjs/toolkit": "^1.4.0",
     "autoprefixer": "^9.8.6",
     "axios": "^0.19.2",
+    "jquery": "^3.5.1",
     "next": "9.5.1",
     "postcss": "^7.0.32",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-image-lightbox": "^5.1.1",
     "react-redux": "^7.2.1",
+    "react-slick": "^0.27.9",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "scrollmagic": "^2.0.7",
+    "slick-carousel": "^1.8.1",
     "tailwindcss": "^1.6.2"
   },
   "devDependencies": {
