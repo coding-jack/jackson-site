@@ -56,7 +56,7 @@ const DevPage = () => {
                 <div className="project-slide p-6 cursor-pointer" index={index} key={index}>
                   <a href={project.link}>
                     <div className="project-wrap">
-                      <img className="mx-auto mb-6" src={project.image.sizes.medium} alt="" />
+                      <img className="mx-auto mb-6 project-image" src={project.image.sizes.medium} alt="" />
                       <h3 className="mb-4">{project.image.title}</h3>
                       <p className="px-6">{project.image.description}</p>
                     </div>
@@ -97,15 +97,17 @@ const DevPage = () => {
             </ul>
           </div>
           <div name="Skills" id="#Skills" className="section flex-col text-center">
-            <h2>{content[0].acf.sections.skills.header}</h2>
-            <p>{content[0].acf.sections.skills.description}</p>
+            <div className="text-box m-12 px-16">
+              <h2>{content[0].acf.sections.skills.header}</h2>
+              <p>{content[0].acf.sections.skills.description}</p>
+            </div>
             <ul>
               {content[0].acf.sections.skills.skill_sets.map((skill_set, index) =>
-                <li key={index}>
+                <li className="py-6" key={index}>
                   <h3>{skill_set.title}</h3>
-                  <ul>
+                  <ul className="flex flex-row justify-center">
                     {skill_set.skills.map((skill, index) =>
-                      <li key={index}>
+                      <li className="mx-4" key={index}>
                         <p>{skill.skill}</p>
                       </li>
                     )}
