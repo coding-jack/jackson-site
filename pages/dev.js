@@ -44,13 +44,13 @@ const DevPage = () => {
           {/* <img src={backgroundUrl} alt="" /> */}
           <div name="About" id="#About" className="section flex-col text-center">
             <h2>{content[0].acf.sections.about.header}</h2>
-            <p>{content[0].acf.sections.about.description}</p>
+            <p className="p-12">{content[0].acf.sections.about.description}</p>
             <img src={content[0].acf.sections.about.featured_image_1.sizes.medium} alt="" />
             <img src={content[0].acf.sections.about.featured_image_2.sizes.medium} alt="" />
           </div>
           <div name="Portfolio" id="#Portfolio" className="flex-col min-h-screen p-20 text-center">
             <h2>{content[0].acf.sections.portfolio.header}</h2>
-            <p>{content[0].acf.sections.portfolio.description}</p>
+            <p className="p-12">{content[0].acf.sections.portfolio.description}</p>
             <Slider {...settings}>
               {content[0].acf.sections.portfolio.wordpress.map((project, index) =>
                 <div className="project-slide p-6 cursor-pointer" index={index} key={index}>
@@ -67,7 +67,7 @@ const DevPage = () => {
           </div>
           <div name="Experience" id="#Experience" className="section flex-col text-center">
             <h2>{content[0].acf.sections.experience.header}</h2>
-            <p>{content[0].acf.sections.experience.description}</p>
+            <p className="p-12">{content[0].acf.sections.experience.description}</p>
             <ul>
               {content[0].acf.sections.experience.jobs.map((job, index) =>
                 <li key={index}>
@@ -83,7 +83,7 @@ const DevPage = () => {
           </div>
           <div name="Education" id="#Education" className="section flex-col text-center">
             <h2>{content[0].acf.sections.education.header}</h2>
-            <p>{content[0].acf.sections.education.description}</p>
+            <p className="p-12">{content[0].acf.sections.education.description}</p>
             <ul>
               {content[0].acf.sections.education.schools.map((school, index) =>
                 <li key={index}>
@@ -99,7 +99,7 @@ const DevPage = () => {
           <div name="Skills" id="#Skills" className="section flex-col text-center">
             <div className="text-box m-12 px-16">
               <h2>{content[0].acf.sections.skills.header}</h2>
-              <p>{content[0].acf.sections.skills.description}</p>
+              <p className="p-12">{content[0].acf.sections.skills.description}</p>
             </div>
             <ul>
               {content[0].acf.sections.skills.skill_sets.map((skill_set, index) =>
