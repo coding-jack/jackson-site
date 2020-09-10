@@ -70,8 +70,8 @@ const DevPage = () => {
             <p className="p-12">{content[0].acf.sections.experience.description}</p>
             <ul>
               {content[0].acf.sections.experience.jobs.map((job, index) =>
-                <li key={index}>
-                  <h3>{job.title}</h3>
+                <li key={index} className="flex flex-row">
+                  <h3 className="items-start">{job.title}</h3>
                   <p>{job.company}</p>
                   <p>{job.location}</p>
                   <p>{job.date_employed}</p>
