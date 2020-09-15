@@ -28,6 +28,16 @@ const DevPage = () => {
       }
     ]
   }
+  const skillsSettings = {
+    infinite: true,
+    autoplay: true,
+    autoplayspeed: 1,
+    speed: 8000,
+    arrows: false,
+    variablewidth: true,
+    slidesToShow: 3,
+    slidesToScroll: 1
+  }
   // const backgroundUrl = content[0].acf.featured_picture.link
   // const backgroundStyle = {
   //   backgroundImage: `url(${content[0].acf.featured_picture.link})`,
@@ -68,18 +78,26 @@ const DevPage = () => {
           <div name="Experience" id="#Experience" className="section flex-col text-center">
             <h2>{content[0].acf.sections.experience.header}</h2>
             <p className="p-12">{content[0].acf.sections.experience.description}</p>
-            <ul>
+            <div>
               {content[0].acf.sections.experience.jobs.map((job, index) =>
-                <li key={index} className="flex flex-row">
-                  <h3 className="items-start">{job.title}</h3>
-                  <p>{job.company}</p>
-                  <p>{job.location}</p>
-                  <p>{job.date_employed}</p>
-                  <p>{job.tech_used}</p>
-                  <p>{job.about}</p>
-                </li>
+                <div key={index} className="py-5">
+                  <div className="title pb-5">
+                    <h3 className="">{job.title}</h3>
+                  </div>
+                  <div className="grid grid-flow-col grid-cols-3 gap-4 pb-6">
+                    <div className={`my-auto ${index % 2 ? 'md:order-2 md:col-span-2' : 'md:col-span-1'}`}>
+                      <p>{job.company}</p>
+                      <p>{job.location}</p>
+                      <p>{job.date_employed}</p>
+                      <p>{job.tech_used}</p>
+                    </div>
+                    <div className="col-span-2">
+                      <p>{job.about}</p>
+                    </div>
+                  </div>
+                </div>
               )}
-            </ul>
+            </div>
           </div>
           <div name="Education" id="#Education" className="section flex-col text-center">
             <h2>{content[0].acf.sections.education.header}</h2>
@@ -105,13 +123,15 @@ const DevPage = () => {
               {content[0].acf.sections.skills.skill_sets.map((skill_set, index) =>
                 <li className="py-6" key={index}>
                   <h3>{skill_set.title}</h3>
-                  <ul className="flex flex-row justify-center">
+                  <div className="flex flex-row justify-center">
+                    {/* <Slider {...skillsSettings}> */}
                     {skill_set.skills.map((skill, index) =>
-                      <li className="mx-4" key={index}>
+                      <div className="mx-4 skill-slide" key={index} index={index}>
                         <p>{skill.skill}</p>
-                      </li>
+                      </div>
                     )}
-                  </ul>
+                    {/* </Slider> */}
+                  </div>
                 </li>
               )}
             </ul>
