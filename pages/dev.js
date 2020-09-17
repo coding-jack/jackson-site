@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import { useStore, connect } from "react-redux";
 import Header from "../components/Header";
 import Slider from "react-slick";
-
+import Particles from 'react-particles-js';
 
 const DevPage = () => {
   const { pages } = useStore().getState().wp
@@ -48,6 +48,7 @@ const DevPage = () => {
       {content[0] &&
         <>
           <Header />
+          <Particles />
           <div className="section justify-center">
             <h1>Dev page</h1>
           </div>
