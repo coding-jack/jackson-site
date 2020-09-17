@@ -3,7 +3,6 @@ import Layout from "../components/Layout";
 import { useStore, connect } from "react-redux";
 import Header from "../components/Header";
 import Slider from "react-slick";
-import Particles from 'react-particles-js';
 
 const DevPage = () => {
   const { pages } = useStore().getState().wp
