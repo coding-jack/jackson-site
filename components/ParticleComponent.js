@@ -5,7 +5,7 @@ function ParticleComponent() {
   return (
     <div className="particles absolute h-screen w-screen z-0">
       <Particles
-        className="absolute h-screen w-screen z-0"
+        class="absolute h-screen w-screen z-0"
         params={{
           particles: {
             number: {
