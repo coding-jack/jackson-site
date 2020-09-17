@@ -48,7 +48,6 @@ const DevPage = () => {
       {content[0] &&
         <>
           <Header />
-          <Particles />
           <div className="section justify-center">
             <h1>Dev page</h1>
           </div>

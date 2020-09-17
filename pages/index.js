@@ -10,28 +10,29 @@ export default function Home() {
         <title>Jackson Kaufman</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="particles absolute h-screen w-screen">
+      <div className="particles absolute h-screen w-screen z-0">
         <Particles
+          className="absolute h-screen w-screen z-0"
           params={{
             particles: {
               number: {
-                value: 80,
+                value: 24,
                 density: {
                   enable: true,
-                  value_area: 800
+                  value_area: 1200
                 }
               },
               color: {
-                value: '#ffffff'
+                value: '#8479f1'
               },
               shape: {
-                // type: circle,
+                type: 'circle',
                 stroke: {
                   width: 0,
                   color: '#000000'
                 },
                 polygon: {
-                  nb_sides: 5
+                  nb_sides: 10
                 },
                 image: {
                   // src: img / github.svg,
@@ -40,7 +41,7 @@ export default function Home() {
                 }
               },
               opacity: {
-                value: 0.5,
+                value: 0.3630136445780753,
                 random: false,
                 anim: {
                   enable: false,
@@ -50,7 +51,7 @@ export default function Home() {
                 }
               },
               size: {
-                value: 3,
+                value: 5,
                 random: true,
                 anim: {
                   enable: false,
@@ -63,34 +64,34 @@ export default function Home() {
                 enable: true,
                 distance: 150,
                 color: '#ffffff',
-                opacity: 0.4,
-                width: 1
+                opacity: 0,
+                width: 0
               },
               move: {
                 enable: true,
-                speed: 6,
-                // direction: none,
-                random: false,
+                speed: 0.4,
+                direction: 'none',
+                random: true,
                 straight: false,
-                // out_mode: out,
+                out_mode: 'out',
                 bounce: false,
                 attract: {
                   enable: false,
                   rotateX: 600,
-                  rotateY: 1200
+                  rotateY: 5603.036688052902
                 }
               }
             },
             interactivity: {
-              // detect_on: canvas,
+              detect_on: 'canvas',
               events: {
                 onhover: {
                   enable: true,
-                  // mode: repulse
+                  mode: 'repulse'
                 },
                 onclick: {
                   enable: true,
-                  // mode: push
+                  mode: 'push'
                 },
                 resize: true
               },
@@ -98,7 +99,7 @@ export default function Home() {
                 grab: {
                   distance: 400,
                   line_linked: {
-                    opacity: 1
+                    opacity: 0.1
                   }
                 },
                 bubble: {
@@ -113,7 +114,7 @@ export default function Home() {
                   duration: 0.4
                 },
                 push: {
-                  particles_nb: 4
+                  particles_nb: 8
                 },
                 remove: {
                   particles_nb: 2
@@ -124,26 +125,27 @@ export default function Home() {
           }}
         />
       </div>
-      <main className={styles.main}>
-        <h1 className="text-6xl mt-0">Jackson Kaufman</h1>
-        <div className={styles.grid}>
-          <Link href="/dev">
-            <a className={styles.card}>
+      <main className="flex flex-col justify-center items-center h-screen">
+        <h1 className="text-4xl mt-0">Which Aspect of Jackson's Life</h1>
+        <h1 className="text-4xl mt-0">Do You Want to Explore..?</h1>
+        <div className="flex item-center justify-center flex-wrap mt-3 mx-6">
+          <Link href="/dev" className="relative z-10">
+            <a className="card relative z-10">
               <h3>Dev Work &rarr;</h3>
               <p>Explore Jackson's web development resume and portfolio</p>
             </a>
           </Link>
-          <Link href="/music">
-            <a className={styles.card}>
+          <Link href="/music" className="relative z-10">
+            <a className="card relative z-10">
               <h3>Music &rarr;</h3>
               <p>See what Jackson has been up to musically</p>
             </a>
           </Link>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        Developed by Jackson Kaufman
+        <footer className={styles.footer}>
+          Developed by Jackson Kaufman
       </footer>
-    </div>
+      </main>
+    </div >
   )
 }
