@@ -20,6 +20,10 @@ html {
   @apply flex items-center min-h-screen p-20
 }
 
+.hero {
+  @apply min-h-screen p-20
+}
+
 h2 {
   font-size: 3.5rem;
 }

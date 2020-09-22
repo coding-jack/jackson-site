@@ -37,20 +37,21 @@ const DevPage = () => {
     slidesToShow: 3,
     slidesToScroll: 1
   }
-  // const backgroundUrl = content[0].acf.featured_picture.link
-  // const backgroundStyle = {
-  //   backgroundImage: `url(${content[0].acf.featured_picture.link})`,
-  // }
+
+  const heroBgStyle = {
+    backgroundImage: `url('images/alex-perez-square.jpg')`,
+    zIndex: '-1000'
+  }
 
   return (
     <Layout className="dev">
       {content[0] &&
         <>
           <Header />
-          <div className="section justify-center">
-            <h1>Dev page</h1>
+          <div className="hero" style={heroBgStyle}>
+            <h3 className="pt-20">I like to create interactive experiences</h3>
+            <h3>with modern tech.</h3>
           </div>
-          {/* <img src={backgroundUrl} alt="" /> */}
           <div name="About" id="#About" className="section flex-col text-center">
             <h2>{content[0].acf.sections.about.header}</h2>
             <p className="p-12">{content[0].acf.sections.about.description}</p>
