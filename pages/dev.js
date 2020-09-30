@@ -39,7 +39,7 @@ const DevPage = () => {
   }
 
   const heroBgStyle = {
-    backgroundImage: `url('images/alex-perez-square.jpg')`,
+    backgroundImage: `url('images/dev-bg-square.jpg')`,
     zIndex: '-1000'
   }
 
