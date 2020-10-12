@@ -4,6 +4,7 @@ import { useStore, connect } from "react-redux";
 import Header from "../components/Header";
 import Slider from "react-slick";
 import Lightbox from 'react-image-lightbox';
+import GalleryProjects from '../components/GalleryProjects'
 
 
 const DevPage = () => {
@@ -67,7 +68,7 @@ const DevPage = () => {
           <div name="Portfolio" id="#Portfolio" className="flex-col min-h-screen p-20 text-center">
             <h2>{content[0].acf.sections.portfolio.header}</h2>
             <p className="p-12">{content[0].acf.sections.portfolio.description}</p>
-            <Slider {...settings}>
+            {/* <Slider {...settings}>
               {content[0].acf.sections.portfolio.wordpress.map((project, index) =>
                 <div className="project-slide p-6 cursor-pointer" index={index} key={index}>
                   <a href={project.link}>
@@ -79,7 +80,8 @@ const DevPage = () => {
                   </a>
                 </div>
               )}
-            </Slider>
+            </Slider> */}
+            <GalleryProjects />
           </div>
           <div name="Experience" id="#Experience" className="section flex-col text-center">
             <h2>{content[0].acf.sections.experience.header}</h2>
