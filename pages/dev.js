@@ -55,14 +55,17 @@ const DevPage = () => {
             <h3 className="pt-20">I like to create interactive experiences</h3>
             <h3>with modern tech.</h3>
           </div>
-          <div name="About" id="#About" className="grid grid-cols-5 gap-4 p-12">
-            <div className="col-span-3">
-              <h2>{content[0].acf.sections.about.header}</h2>
-              <p className="">{content[0].acf.sections.about.description}</p>
-            </div>
-            <div className="col-span-2">
-              <img src={content[0].acf.sections.about.featured_image_1.sizes.medium} alt="" />
-              {/* <img src={content[0].acf.sections.about.featured_image_2.sizes.medium} alt="" /> */}
+          <div name="About" id="#About" className="p-12">
+            <h2>{content[0].acf.sections.about.header}</h2>
+            <div className="grid grid-cols-4">
+              <div className="col-span-2 relative">
+                <img className="relative z-10 hover:opacity-0 transition duration-500 ease-in-out" src={content[0].acf.sections.about.featured_image_1.sizes.large} alt="" />
+                <p className="z-0 absolute inset-0 text-center p-auto">{content[0].acf.sections.about.description_1}</p>
+              </div>
+              <div className="col-span-2 relative">
+                <img className="relative z-10 hover:opacity-0 transition duration-500 ease-in-out" src={content[0].acf.sections.about.featured_image_2.sizes.large} alt="" />
+                <p className="z-0 absolute inset-0 text-center p-auto">{content[0].acf.sections.about.description_2}</p>
+              </div>
             </div>
           </div>
           <div name="Portfolio" id="#Portfolio" className="flex-col min-h-screen p-20 text-center">
