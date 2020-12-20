@@ -32,7 +32,7 @@ h3 {
   font-size: 1.4rem;
 }
 
-.card {
+/* .card {
   margin: 1rem;
   flex-basis: 45%;
   padding: 1.5rem;
@@ -61,4 +61,45 @@ h3 {
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
+} */
+.card p {
+  display: none;
+}
+
+.card:hover p {
+  display: block;
+  animation: animated-text 2s steps(29,end) 0.1s 1 normal both;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.hello {
+  animation: animated-text 2s steps(29,end) 1s 1 normal both;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.heading-1 {
+  animation: animated-text 2s steps(29,end) 3s 1 normal both;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.heading-2 {
+  animation: animated-text 2s steps(29,end) 5s 1 normal both;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 450px;}
+}
+
+body .dev-bg {
+  background-color: green;
+}
+
+body .music-bg {
+  background-color: blue;
 }
