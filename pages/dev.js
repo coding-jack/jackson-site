@@ -11,22 +11,17 @@ import GalleryProjects from '../components/dev/GalleryProjects'
 
 
 const DevPage = () => {
-  const { pages } = useStore().getState().wp
-  const content = pages.filter((page) => page.slug === "dev")
-
   return (
     <Layout className="dev">
-      {content[0] &&
-        <>
-          <Header />
-          <Hero />
-          <GalleryProjects />
-          <About />
-          <Experience />
-          <Education />
-          <Skills />
-        </>
-      }
+      <>
+        <Header />
+        <Hero />
+        <GalleryProjects />
+        <About />
+        <Experience />
+        <Education />
+        <Skills />
+      </>
     </Layout>
   )
 }
