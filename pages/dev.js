@@ -68,11 +68,7 @@ const DevPage = () => {
               </div>
             </div>
           </div>
-          <div name="Portfolio" id="#Portfolio" className="flex-col min-h-screen p-20 text-center">
-            <h2>{content[0].acf.sections.portfolio.header}</h2>
-            <p className="p-12">{content[0].acf.sections.portfolio.description}</p>
-            <GalleryProjects />
-          </div>
+          <GalleryProjects />
           <div name="Experience" id="#Experience" className="section flex-col text-center">
             <h2>{content[0].acf.sections.experience.header}</h2>
             <p className="p-12">{content[0].acf.sections.experience.description}</p>
