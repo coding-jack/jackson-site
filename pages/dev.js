@@ -2,9 +2,11 @@ import React from 'react'
 import Layout from "../components/Layout";
 import { useStore, connect } from "react-redux";
 import Header from "../components/Header";
+import Hero from "../components/dev/DevHero";
+import About from "../components/dev/About";
 import Slider from "react-slick";
 import Lightbox from 'react-image-lightbox';
-import GalleryProjects from '../components/GalleryProjects'
+import GalleryProjects from '../components/dev/GalleryProjects'
 
 
 const DevPage = () => {
@@ -41,34 +43,14 @@ const DevPage = () => {
     slidesToScroll: 1
   }
 
-  const heroBgStyle = {
-    backgroundImage: `url('images/dev-bg-square.jpg')`,
-    zIndex: '-1000'
-  }
-
   return (
     <Layout className="dev">
       {content[0] &&
         <>
           <Header />
-          <div className="hero" style={heroBgStyle}>
-            <h3 className="pt-20">I like to create interactive experiences</h3>
-            <h3>with modern tech.</h3>
-          </div>
-          <div name="About" id="#About" className="p-12">
-            <h2>{content[0].acf.sections.about.header}</h2>
-            <div className="grid grid-cols-4">
-              <div className="col-span-2 relative">
-                <img className="relative z-10 hover:opacity-0 transition duration-500 ease-in-out" src={content[0].acf.sections.about.featured_image_1.sizes.large} alt="" />
-                <p className="z-0 absolute inset-0 text-center p-auto">{content[0].acf.sections.about.description_1}</p>
-              </div>
-              <div className="col-span-2 relative">
-                <img className="relative z-10 hover:opacity-0 transition duration-500 ease-in-out" src={content[0].acf.sections.about.featured_image_2.sizes.large} alt="" />
-                <p className="z-0 absolute inset-0 text-center p-auto">{content[0].acf.sections.about.description_2}</p>
-              </div>
-            </div>
-          </div>
+          <Hero />
           <GalleryProjects />
+          <About />
           <div name="Experience" id="#Experience" className="section flex-col text-center">
             <h2>{content[0].acf.sections.experience.header}</h2>
             <p className="p-12">{content[0].acf.sections.experience.description}</p>
