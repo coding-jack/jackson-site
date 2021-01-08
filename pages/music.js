@@ -1,12 +1,13 @@
 import React from 'react'
+import { useStore, connect } from "react-redux";
 import Header from "../components/Header";
 import Layout from "../components/Layout";
-import { useStore, connect } from "react-redux";
 import MusicAbout from "../components/music/MusicAbout";
 import PsychRock from "../components/music/PsychRock";
 import Goofball from "../components/music/Goofball";
 import BoogieFunk from "../components/music/BoogieFunk";
 import SideProjects from "../components/music/SideProjects";
+import PhotoGallery from "../components/music/PhotoGallery";
 
 const MusicPage = () => {
   const { pages } = useStore().getState().wp
@@ -22,16 +23,7 @@ const MusicPage = () => {
           <Goofball />
           <BoogieFunk />
           <SideProjects />
-          <div name="PhotoGallery" id="#PhotoGallery" className="section flex-col">
-            <h2>{content[0].acf.sections.gallery.header}</h2>
-            <ul>
-              {content[0].acf.sections.gallery.gallery.map((photo, index) =>
-                <li key={index}>
-                  <img src={photo.sizes.medium} alt="" />
-                </li>
-              )}
-            </ul>
-          </div>
+          <PhotoGallery />
         </>
       }
     </Layout >
