@@ -2,6 +2,7 @@ import React from 'react'
 import Header from "../components/Header";
 import Layout from "../components/Layout";
 import { useStore, connect } from "react-redux";
+import MusicAbout from "../components/music/MusicAbout";
 
 const MusicPage = () => {
   const { pages } = useStore().getState().wp
@@ -12,11 +13,7 @@ const MusicPage = () => {
       {content[0] &&
         <>
           <Header />
-          <div name="About" id="#About" className="section flex-col justify-center about">
-            <h2>{content[0].acf.sections.about.header}</h2>
-            <img src={content[0].acf.featured_picture.sizes.medium} alt="" />
-            <p>{content[0].acf.sections.about.description}</p>
-          </div>
+          <MusicAbout />
           <div name="PsychedelicRock" id="#PsychedelicRock" className="section flex-col">
             <h2>{content[0].acf.sections.shwarma.header}</h2>
             <p>{content[0].acf.sections.shwarma.description}</p>
