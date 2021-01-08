@@ -5,6 +5,7 @@ import { useStore, connect } from "react-redux";
 import MusicAbout from "../components/music/MusicAbout";
 import PsychRock from "../components/music/PsychRock";
 import Goofball from "../components/music/Goofball";
+import BoogieFunk from "../components/music/BoogieFunk";
 
 const MusicPage = () => {
   const { pages } = useStore().getState().wp
@@ -18,24 +19,7 @@ const MusicPage = () => {
           <MusicAbout />
           <PsychRock />
           <Goofball />
-          <div name="BoogieFunk" id="#BoogieFunk" className="section flex-col">
-            <h2>{content[0].acf.sections.sbc.header}</h2>
-            <p>{content[0].acf.sections.sbc.description}</p>
-            <ul>
-              {content[0].acf.sections.sbc.photos.map((photo, index) =>
-                <li key={index}>
-                  <img src={photo.sizes.medium} alt="" />
-                </li>
-              )}
-            </ul>
-            <ul>
-              {content[0].acf.sections.sbc.videos.map((video, index) =>
-                <li key={index}>
-                  <span dangerouslySetInnerHTML={{ __html: video.video }} />
-                </li>
-              )}
-            </ul>
-          </div>
+          <BoogieFunk />
           <div name="SideProjects" id="#SideProjects" className="section flex-col">
             <h2>{content[0].acf.sections.other.header}</h2>
             <p>{content[0].acf.sections.other.description}</p>
