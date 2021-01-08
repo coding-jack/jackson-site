@@ -3,6 +3,8 @@ import Header from "../components/Header";
 import Layout from "../components/Layout";
 import { useStore, connect } from "react-redux";
 import MusicAbout from "../components/music/MusicAbout";
+import PsychRock from "../components/music/PsychRock";
+import Goofball from "../components/music/Goofball";
 
 const MusicPage = () => {
   const { pages } = useStore().getState().wp
@@ -14,42 +16,8 @@ const MusicPage = () => {
         <>
           <Header />
           <MusicAbout />
-          <div name="PsychedelicRock" id="#PsychedelicRock" className="section flex-col">
-            <h2>{content[0].acf.sections.shwarma.header}</h2>
-            <p>{content[0].acf.sections.shwarma.description}</p>
-            <ul>
-              {content[0].acf.sections.shwarma.photos.map((photo, index) =>
-                <li key={index}>
-                  <img src={photo.sizes.medium} alt="" />
-                </li>
-              )}
-            </ul>
-            <ul>
-              {content[0].acf.sections.shwarma.videos.map((video, index) =>
-                <li key={index}>
-                  <span dangerouslySetInnerHTML={{ __html: video.video }} />
-                </li>
-              )}
-            </ul>
-          </div>
-          <div name="FunFunkyFolk" id="#FunFunkyFolk" className="section flex-col">
-            <h2>{content[0].acf.sections.gb.header}</h2>
-            <p>{content[0].acf.sections.gb.description}</p>
-            <ul>
-              {content[0].acf.sections.gb.photos.map((photo, index) =>
-                <li key={index}>
-                  <img src={photo.sizes.medium} alt="" />
-                </li>
-              )}
-            </ul>
-            <ul>
-              {content[0].acf.sections.gb.videos.map((video, index) =>
-                <li key={index}>
-                  <span dangerouslySetInnerHTML={{ __html: video.video }} />
-                </li>
-              )}
-            </ul>
-          </div>
+          <PsychRock />
+          <Goofball />
           <div name="BoogieFunk" id="#BoogieFunk" className="section flex-col">
             <h2>{content[0].acf.sections.sbc.header}</h2>
             <p>{content[0].acf.sections.sbc.description}</p>
