@@ -17,7 +17,7 @@ const GalleryProjects = () => {
       <p className="p-12">{content[0].acf.sections.portfolio.description}</p>
       <div className="wp-project-gallery">
         <h3>Wordpress</h3>
-        <div style={divStyle} className="grid md:grid-cols-3 gap-6 mb-3">
+        <div style={divStyle} className="grid md:grid-cols-3 sm:grid-cols-2 gap-6 mb-3">
           <AnimateSharedLayout type="crossfade">
             {content[0].acf.sections.portfolio.wordpress
               .slice(0, 3)
@@ -32,7 +32,7 @@ const GalleryProjects = () => {
                     stiffness: 260,
                     damping: 20
                   }}
-                  className={`gallery-photo rounded-lg border border-red bg-center bg-cover cursor-pointer relative`}
+                  className={`gallery-photo rounded-lg border border-red bg-top bg-cover cursor-pointer relative ${index === 2 ? 'sm:hidden md:block' : ''}`}
                   style={{ backgroundImage: `url('${project.image.url}')` }}
                   alt={project.image.alt}
                 />
@@ -49,7 +49,7 @@ const GalleryProjects = () => {
       </div>
       <div className="js-project-gallery">
         <h3>Javascript</h3>
-        <div style={divStyle} className="grid md:grid-cols-3 md:grid-rows-2 gap-6 mb-3">
+        <div style={divStyle} className="grid md:grid-cols-3 sm:grid-cols-2 gap-6 mb-3">
           <AnimateSharedLayout type="crossfade">
             {content[0].acf.sections.portfolio.javascript
               .slice(0, 3)
@@ -64,7 +64,7 @@ const GalleryProjects = () => {
                     stiffness: 260,
                     damping: 20
                   }}
-                  className={`gallery-photo rounded-lg border border-red bg-center bg-cover cursor-pointer relative`}
+                  className={`gallery-photo rounded-lg border border-red bg-top bg-cover cursor-pointer relative ${index === 2 ? 'sm:hidden md:block' : ''}`}
                   style={{ backgroundImage: `url('${project.image.url}')` }}
                   alt={project.image.alt}
                 />
