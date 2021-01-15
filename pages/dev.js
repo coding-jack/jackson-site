@@ -1,6 +1,6 @@
 import React from 'react'
-import Layout from "../components/Layout";
 import { useStore, connect } from "react-redux";
+import Layout from "../components/Layout";
 import Header from "../components/Header";
 import Hero from "../components/dev/DevHero";
 import About from "../components/dev/About";
@@ -21,10 +21,10 @@ const DevPage = () => {
           <Header />
           <Hero />
           <GalleryProjects />
-          <About />
           <Experience />
           <Education />
           <Skills />
+          <About />
         </>
       }
     </Layout>
