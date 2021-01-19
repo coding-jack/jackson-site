@@ -18,7 +18,7 @@ const DevPage = () => {
     <Layout className="dev">
       {content[0] &&
         <>
-          <Header />
+          {/* <Header /> */}
           <Hero />
           <GalleryProjects />
           <Experience />
