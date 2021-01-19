@@ -26,10 +26,12 @@ html {
 
 h2 {
   font-size: 3.5rem;
+  @apply text-yellow
 }
 
 h3 {
   font-size: 1.4rem;
+  @apply text-violet
 }
 
 /* .card {

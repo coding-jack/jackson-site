@@ -17,10 +17,10 @@ const Experience = () => {
             </div>
             <div className="grid grid-flow-col grid-cols-3 gap-4 pb-6">
               <div className={`my-auto ${index % 2 ? 'md:order-2 md:col-span-2' : 'md:col-span-1'}`}>
-                <p>{job.company}</p>
-                <p>{job.location}</p>
+                <p className="text-lime">{job.company}</p>
+                <p className="text-purple">{job.location}</p>
                 <p>{job.date_employed}</p>
-                <p>{job.tech_used}</p>
+                <p className="text-magenta">{job.tech_used}</p>
               </div>
               <div className="col-span-2">
                 <p>{job.about}</p>
