@@ -37,7 +37,7 @@ function Header() {
     //   }
     // </header>
     // < !--This example requires Tailwind CSS v2.0 + -->
-    <header className="fixed w-full">
+    <header className="fixed w-full z-10">
       {content[0] &&
         <>
           <div className="bg-black md:bg-opacity-50">

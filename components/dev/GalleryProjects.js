@@ -64,7 +64,7 @@ const GalleryProjects = () => {
                     stiffness: 260,
                     damping: 20
                   }}
-                  className={`gallery-photo rounded-lg border border-red bg-top bg-cover cursor-pointer relative ${index === 2 ? 'sm:hidden md:block' : ''}`}
+                  className={`gallery-photo rounded-lg border border-red bg-top bg-cover cursor-pointer ${index === 2 ? 'sm:hidden md:block' : ''}`}
                   style={{ backgroundImage: `url('${project.image.url}')` }}
                   alt={project.image.alt}
                 />
