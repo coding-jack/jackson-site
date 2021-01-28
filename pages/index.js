@@ -14,7 +14,7 @@ export default function Home() {
     console.log('removeClass');
   }
   return (
-    <div className>
+    <div>
       <Head>
         <title>Jackson Kaufman</title>
         <link rel="icon" href="/favicon.ico" />
