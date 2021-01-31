@@ -3,7 +3,7 @@ import useGetWPPages from '../hooks/useGetWPPages';
 import { useStore, connect } from "react-redux";
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-
+import Image from 'next/image'
 
 function Header() {
   useGetWPPages();
@@ -45,8 +45,15 @@ function Header() {
               <div className="flex items-center justify-between h-16">
                 <div className="flex-shrink-0">
                   <Link href="/">
-                    <a>
-                      <img className="h-8 w-8" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow" />
+                    <a className="rotate-90">
+                      {/* <img className="home-button h-8 w-8" src="/images/Prismatic-Guitar.svg" alt="Workflow" /> */}
+                      <Image
+                        className="rotate-90 h-8 w-8 home-button"
+                        src="/images/guitare_elec.svg"
+                        alt="Home"
+                        width={60}
+                        height={60}
+                      />
                     </a>
                   </Link>
                 </div>

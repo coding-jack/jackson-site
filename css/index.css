@@ -32,6 +32,10 @@ h3 {
   font-size: 1.4rem;
 }
 
+.home-button {
+  animation: rotation 2s infinite linear;
+}
+
 .card {
   min-height: 75px;
 }
