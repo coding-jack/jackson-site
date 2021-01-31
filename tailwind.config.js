@@ -22,6 +22,9 @@ module.exports = {
         red: '#FF3A5E',
         lime: '#80ff00',
       },
+      zIndex: {
+        '-10': '-10'
+      },
     },
     screens: {
       'sm': '640px',

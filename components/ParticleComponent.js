@@ -3,20 +3,20 @@ import Particles from "react-particles-js";
 
 function ParticleComponent() {
   return (
-    <div className="particles absolute h-screen w-screen z-0">
+    <div className="particles absolute h-screen w-screen">
       <Particles
         className="absolute h-screen w-screen z-0"
         params={{
           particles: {
             number: {
-              value: 24,
+              value: 2,
               density: {
                 enable: true,
                 value_area: 600
               }
             },
             color: {
-              value: '#8479f1'
+              value: '#05CAFF'
             },
             shape: {
               type: 'circle',
@@ -44,7 +44,7 @@ function ParticleComponent() {
               }
             },
             size: {
-              value: 5,
+              value: 50,
               random: true,
               anim: {
                 enable: false,
@@ -107,7 +107,7 @@ function ParticleComponent() {
                 duration: 0.4
               },
               push: {
-                particles_nb: 8
+                particles_nb: 3
               },
               remove: {
                 particles_nb: 2

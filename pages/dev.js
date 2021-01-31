@@ -1,7 +1,6 @@
 import React from 'react'
 import { useStore, connect } from "react-redux";
 import Layout from "../components/Layout";
-import Header from "../components/Header";
 import Hero from "../components/dev/DevHero";
 import About from "../components/dev/About";
 import Experience from "../components/dev/Experience";

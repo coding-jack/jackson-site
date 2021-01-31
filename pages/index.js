@@ -21,14 +21,12 @@ export default function Home() {
       </Head>
       <ParticleComponent />
       <main className="flex flex-col items-center h-screen">
-        <div className="text-wrapper text-center pt-5">
-          <h1 className="hello">Hello</h1>
-          <h1 className="heading-1 text-4xl mt-0">Which Aspect of Jackson's Life</h1>
-          <h1 className="heading-2 text-4xl mt-0">Do You Want to Explore..?</h1>
-        </div>
-        <div className="flex items-end justify-center flex-wrap mt-auto mx-6">
+        <h1 className="hello pt-5">Hello</h1>
+        <h1 className="heading-1 text-4xl mt-0">which body of work</h1>
+        <h1 className="heading-2 text-4xl mt-0">would you like to explore..?</h1>
+        <div className="mx-6 flex flex-col">
           <Link href="/dev" className="dev-link relative z-10">
-            <a className="card relative z-10"
+            <a className="card my-20 relative z-10"
               onMouseEnter={addBgClass}
               onMouseLeave={removeBgClass}
             >
@@ -36,6 +34,8 @@ export default function Home() {
               <p>Explore Jackson's web development resume and portfolio</p>
             </a>
           </Link>
+        </div>
+        <div className="mt-auto mb-20">
           <Link href="/music" className="music-link relative z-10">
             <a className="card relative z-10"
               onMouseEnter={addBgClass}
@@ -46,7 +46,7 @@ export default function Home() {
             </a>
           </Link>
         </div>
-        <footer className={styles.footer}>
+        <footer className="mt-auto">
           Developed by Jackson Kaufman
       </footer>
       </main>
