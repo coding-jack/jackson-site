@@ -32,6 +32,10 @@ h3 {
   font-size: 1.4rem;
 }
 
+.card {
+  min-height: 75px;
+}
+
 .card p {
   display: none;
 }

@@ -25,6 +25,9 @@ module.exports = {
       zIndex: {
         '-10': '-10'
       },
+      maxWidth: {
+        '1/2': '50%',
+      }
     },
     screens: {
       'sm': '640px',

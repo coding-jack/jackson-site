@@ -62,7 +62,7 @@ function ParticleComponent() {
             },
             move: {
               enable: true,
-              speed: 0.4,
+              speed: 2,
               direction: 'none',
               random: true,
               straight: false,

@@ -26,7 +26,7 @@ export default function Home() {
         <h1 className="heading-2 text-4xl mt-0">would you like to explore..?</h1>
         <div className="mx-6 flex flex-col">
           <Link href="/dev" className="dev-link relative z-10">
-            <a className="card my-20 relative z-10"
+            <a className="card mt-40 relative z-10"
               onMouseEnter={addBgClass}
               onMouseLeave={removeBgClass}
             >
@@ -37,7 +37,7 @@ export default function Home() {
         </div>
         <div className="mt-auto mb-20">
           <Link href="/music" className="music-link relative z-10">
-            <a className="card relative z-10"
+            <a className="card inline-block relative z-10"
               onMouseEnter={addBgClass}
               onMouseLeave={removeBgClass}
             >
