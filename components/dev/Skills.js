@@ -27,9 +27,9 @@ const Skills = () => {
 
   return (
     <div name="Skills" id="#Skills" className="section flex-col text-center">
-      <div className="text-box m-12 px-16">
-        <h2>{content[0].acf.sections.skills.header}</h2>
-        <p className="p-12">{content[0].acf.sections.skills.description}</p>
+      <div className="text-box my-12">
+        <h2 className="pl-12 text-left">{content[0].acf.sections.skills.header}</h2>
+        <p className="p-12 text-left">{content[0].acf.sections.skills.description}</p>
       </div>
       <ul>
         {content[0].acf.sections.skills.skill_sets.map((skill_set, index) =>

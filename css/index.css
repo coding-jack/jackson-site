@@ -29,6 +29,10 @@ html {
   @apply text-cyan
 }
 
+.hover-image {
+  border: 2px solid #FF3A5E !important;
+}
+
 h2 {
   font-size: 3.5rem;
 }

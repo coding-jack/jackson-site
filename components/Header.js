@@ -14,7 +14,6 @@ function Header() {
   function removeSpace(prop) {
     return prop.replace(/\s/g, '');
   }
-  console.log(router)
 
   return (
     // <header className="flex justify-center fixed inset-x-0 top-0 bg-black bg-opacity-25">
@@ -38,7 +37,7 @@ function Header() {
     //   }
     // </header>
     // < !--This example requires Tailwind CSS v2.0 + -->
-    <header className="fixed w-full z-10">
+    <header className="fixed w-full z-20">
       {content[0] &&
         <>
           <div className="bg-black md:bg-opacity-50">
@@ -185,7 +184,6 @@ function Header() {
                 </div>
                 <div className="mt-3 px-2 space-y-1">
                   <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700">Your Profile</a>
-
                 </div>
               </div>
             </div>

@@ -18,7 +18,7 @@ const DevHero = () => {
         <div className="col-span-1">
           <div className="img-wrap rounded-full relative rounded-full">
             <Image
-              className="absolute z-10 hover:opacity-0 transition duration-500 ease-in-out ring-4 rounded-full"
+              className="hover-image z-10 hover:opacity-0 duration-500 rounded-full border-opacity-100 border-red border-2"
               src={content[0].acf.featured_picture.url}
               alt={content[0].acf.featured_picture.alt}
               width={400}

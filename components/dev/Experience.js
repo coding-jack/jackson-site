@@ -6,9 +6,9 @@ const Experience = () => {
   const content = pages.filter((page) => page.slug === "dev")
 
   return (
-    <div name="Experience" id="#Experience" className="section flex-col text-center">
-      <h2>{content[0].acf.sections.experience.header}</h2>
-      <p className="p-12">{content[0].acf.sections.experience.description}</p>
+    <div name="Experience" id="#Experience" className="section min-h-screen flex-col text-center">
+      <h2 className="min-w-full pl-12 text-left">{content[0].acf.sections.experience.header}</h2>
+      <p className="p-12 text-left">{content[0].acf.sections.experience.description}</p>
       <div>
         {content[0].acf.sections.experience.jobs.map((job, index) =>
           <div key={index} className="py-5">

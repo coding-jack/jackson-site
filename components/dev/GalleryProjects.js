@@ -13,8 +13,8 @@ const GalleryProjects = () => {
 
   return (
     <div name="Portfolio" id="#Portfolio" className="flex-col min-h-screen p-20 text-center">
-      <h2>{content[0].acf.sections.portfolio.header}</h2>
-      <p className="p-12">{content[0].acf.sections.portfolio.description}</p>
+      <h2 className="pl-12 text-left">{content[0].acf.sections.portfolio.header}</h2>
+      <p className="p-12 text-left">{content[0].acf.sections.portfolio.description}</p>
       <div className="wp-project-gallery">
         <h3>Wordpress</h3>
         <div style={divStyle} className="grid md:grid-cols-3 sm:grid-cols-2 gap-6 mb-3">

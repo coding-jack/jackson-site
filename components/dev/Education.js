@@ -6,8 +6,8 @@ const Education = () => {
   const content = pages.filter((page) => page.slug === "dev")
   return (
     <div name="Education" id="#Education" className="section flex-col text-center">
-      <h2>{content[0].acf.sections.education.header}</h2>
-      <p className="p-12">{content[0].acf.sections.education.description}</p>
+      <h2 className="pl-12 text-left min-w-full">{content[0].acf.sections.education.header}</h2>
+      <p className="p-12 text-left">{content[0].acf.sections.education.description}</p>
       <ul>
         {content[0].acf.sections.education.schools.map((school, index) =>
           <li key={index}>
