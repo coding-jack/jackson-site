@@ -13,18 +13,18 @@ const DevHero = () => {
     <div className="hero relative" style={heroBgStyle}>
       <h3 className="pt-20">I like to create interactive experiences</h3>
       <h3>with modern tech.</h3>
-      <div className="lg:grid grid-cols-3">
-        <div className="col-span-2"></div>
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 relative bottom-0 mt-48">
+        <div className="md:col-span-2"></div>
         <div className="col-span-1">
-          <div className="img-wrap relative rounded-full bottom-0 right-0">
+          <div className="img-wrap rounded-full relative rounded-full">
             <Image
-              className="z-10 hover:opacity-0 transition duration-500 ease-in-out"
-              src={content[0].acf.sections.about.featured_image_1.url}
-              alt={content[0].acf.sections.about.featured_image_1.alt}
-              width={300}
-              height={300}
+              className="absolute z-10 hover:opacity-0 transition duration-500 ease-in-out ring-4 rounded-full"
+              src={content[0].acf.featured_picture.url}
+              alt={content[0].acf.featured_tagline}
+              width={400}
+              height={400}
             />
-            <p className="absolute inset-0 text-center p-auto">{content[0].acf.sections.about.description_2}</p>
+            <p className="absolute inset-text text-center">{content[0].acf.sections.about.description_1}</p>
           </div>
         </div>
       </div>

@@ -24,6 +24,11 @@ html {
   @apply min-h-screen p-20
 }
 
+.inset-text {
+  top: 40%;
+  @apply text-cyan
+}
+
 h2 {
   font-size: 3.5rem;
 }
