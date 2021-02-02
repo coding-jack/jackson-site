@@ -59,9 +59,9 @@ function Header() {
                 </div>
                 <div className="flex items-center">
                   <div className="hidden md:block">
-                    <div className="ml-10 flex items-baseline space-x-4">
+                    <div className="flex items-baseline space-x-4">
                       {Object.values(content[0].acf.sections).map((section) =>
-                        <div className="mx-3" key={section.header}>
+                        <div className="px-3" key={section.header}>
                           <Link href={`#${removeSpace(section.header)}`}>
                             <a>{section.header}</a>
                           </Link>
