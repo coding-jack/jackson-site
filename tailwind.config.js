@@ -44,7 +44,11 @@ module.exports = {
     //   '21/9': [21, 9],  // or 21 / 9
     // }
   },
-  variants: {},
+  variants: {
+    extend: {
+      transform: ['hover', 'focus']
+    }
+  },
   plugins: [
     // require("tailwindcss-responsive-embed"),
     // require("tailwindcss-aspect-ratio"),

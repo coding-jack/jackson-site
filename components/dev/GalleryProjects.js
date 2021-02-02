@@ -10,21 +10,24 @@ const GalleryProjects = () => {
   const [selectedId, setSelectedId] = useState(null)
 
   return (
-    <div name="Portfolio" id="#Portfolio" className="flex-col min-h-screen p-20 text-center">
-      <h2 className="pl-12 text-left">{content[0].acf.sections.portfolio.header}</h2>
-      <p className="p-12 text-left">{content[0].acf.sections.portfolio.description}</p>
-      <div className="wp-project-gallery">
-        <h3>Wordpress</h3>
-        <div style={divStyle} className="grid md:grid-cols-3 sm:grid-cols-2 gap-6 mb-3">
+    <div name="Portfolio" id="#Portfolio" className="flex-col min-h-screen p-20 text-left">
+      <h2 className="underline">{content[0].acf.sections.portfolio.header}</h2>
+      <p className="py-6">{content[0].acf.sections.portfolio.description}</p>
+      <div className="wp-project-gallery pb-6">
+        <h3 className="pb-6">Wordpress</h3>
+        <div style={divStyle} className="gallery grid md:grid-cols-3 sm:grid-cols-2 gap-6 mb-3">
           {content[0].acf.sections.portfolio.wordpress
             .slice(0, 3)
             .map((project, index) =>
-              <div
-                key={index}
-                className={`gallery-photo rounded-lg border border-red bg-top bg-cover cursor-pointer relative ${index === 2 ? 'sm:hidden md:block' : ''}`}
-                style={{ backgroundImage: `url('${project.image.url}')` }}
-                alt={project.image.alt}
-              />
+              <a className="relative photo-wrap" target="_blank" href={project.link}>
+                <div
+                  key={index}
+                  className={`gallery-photo rounded-lg border border-red bg-top bg-cover cursor-pointer relative hover:opacity-50 duration-500 ${index === 2 ? 'sm:hidden md:block' : ''}`}
+                  style={{ backgroundImage: `url('${project.image.url}')` }}
+                  alt={project.image.alt}
+                />
+                <button>{project.image.title} »</button>
+              </a>
             )}
           {selectedId && (
             <div layoutId={selectedIdentifier}>
@@ -34,17 +37,20 @@ const GalleryProjects = () => {
         </div>
       </div>
       <div className="js-project-gallery">
-        <h3>Javascript</h3>
-        <div style={divStyle} className="grid md:grid-cols-3 sm:grid-cols-2 gap-6 mb-3">
+        <h3 className="pb-6">Javascript</h3>
+        <div style={divStyle} className="gallery grid md:grid-cols-3 sm:grid-cols-2 gap-6 mb-3">
           {content[0].acf.sections.portfolio.javascript
             .slice(0, 3)
             .map((project, index) =>
-              <div
-                key={index}
-                className={`gallery-photo rounded-lg border border-red bg-top bg-cover cursor-pointer ${index === 2 ? 'sm:hidden md:block' : ''}`}
-                style={{ backgroundImage: `url('${project.image.url}')` }}
-                alt={project.image.alt}
-              />
+              <a className="relative photo-wrap" target="_blank" href={project.link}>
+                <div
+                  key={index}
+                  className={`gallery-photo rounded-lg border border-red bg-top bg-cover cursor-pointer hover:opacity-50 duration-500 ${index === 2 ? 'sm:hidden md:block' : ''}`}
+                  style={{ backgroundImage: `url('${project.image.url}')` }}
+                  alt={project.image.alt}
+                />
+                <button>{project.image.title} »</button>
+              </a>
             )}
           {selectedId && (
             <div layoutId={selectedIdentifier}>

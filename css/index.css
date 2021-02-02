@@ -100,3 +100,34 @@ body .dev-bg {
 body .music-bg {
   background-color: blue;
 }
+
+.photo-wrap:hover .gallery-photo {
+  filter: blur(5px);
+  transform: scale(.95);
+}
+
+.gallery button {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 5px 10px;
+  margin: auto;
+  position: absolute;
+  height: 4rem;
+  display: inline-block;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+  box-shadow: 0 0 15px rgba(0,0,0,.8);
+  filter: blur(15px);
+  background-color: #79d9ff;
+  border-color: #225389;
+  color: rgb(61, 9, 9);
+}
+
+.gallery .photo-wrap:hover button {
+  opacity: 1;
+  transform: scale(0.9);
+  filter: blur(0);
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 15px;
+}
