@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
-import Particles from 'react-particles-js'
 import ParticleComponent from '../components/ParticleComponent'
 
 export default function Home() {

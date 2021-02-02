@@ -20,11 +20,11 @@ const DevHero = () => {
             <Image
               className="absolute z-10 hover:opacity-0 transition duration-500 ease-in-out ring-4 rounded-full"
               src={content[0].acf.featured_picture.url}
-              alt={content[0].acf.featured_tagline}
+              alt={content[0].acf.featured_picture.alt}
               width={400}
               height={400}
             />
-            <p className="absolute inset-text text-center">{content[0].acf.sections.about.description_1}</p>
+            <p className="absolute inset-text text-center">{content[0].acf.featured_tagline}</p>
           </div>
         </div>
       </div>

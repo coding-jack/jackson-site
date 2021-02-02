@@ -22,7 +22,6 @@ const DevPage = () => {
           <Experience />
           <Education />
           <Skills />
-          <About />
         </>
       }
     </Layout>

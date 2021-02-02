@@ -14,6 +14,7 @@ function Header() {
   function removeSpace(prop) {
     return prop.replace(/\s/g, '');
   }
+  console.log(router)
 
   return (
     // <header className="flex justify-center fixed inset-x-0 top-0 bg-black bg-opacity-25">
