@@ -6,24 +6,22 @@ const Experience = () => {
   const content = pages.filter((page) => page.slug === "dev")
 
   return (
-    <div name="Experience" id="#Experience" className="section min-h-screen flex-col text-center">
-      <h2 className="min-w-full pl-12 text-left">{content[0].acf.sections.experience.header}</h2>
-      <p className="p-12 text-left">{content[0].acf.sections.experience.description}</p>
+    <div name="Experience" id="#Experience" className="section min-h-screen flex-col">
+      <h2 className="min-w-full text-left underline text-yellow">{content[0].acf.sections.experience.header}</h2>
+      <p className="py-8 text-left">{content[0].acf.sections.experience.description}</p>
       <div>
         {content[0].acf.sections.experience.jobs.map((job, index) =>
-          <div key={index} className="py-5">
-            <div className="title pb-5">
-              <h3 className="">{job.title}</h3>
-            </div>
+          <div key={index} className={`py-16 ${index !== 0 ? 'border-top border-t-2' : ''}`}>
             <div className="grid grid-flow-col grid-cols-3 gap-4 pb-6">
-              <div className={`my-auto ${index % 2 ? 'md:order-2 md:col-span-2' : 'md:col-span-1'}`}>
-                <p className="text-lime">{job.company}</p>
-                <p className="text-purple">{job.location}</p>
-                <p>{job.date_employed}</p>
-                <p className="text-magenta">{job.tech_used}</p>
+              <div className={`${index % 2 ? 'md:order-2 md:col-span-2 text-right' : 'md:col-span-1'}`}>
+                <h3 className="text-lime">{job.company}</h3>
+                <h1 className="text-magenta">{job.title}</h1>
+                <p className="text-violet">{job.date_employed}</p>
+                <p className="text-cyan">{job.location}</p>
+                <p className="text-gray">{job.tech_used}</p>
               </div>
-              <div className="col-span-2">
-                <p>{job.about}</p>
+              <div className={`col-span-2 ${index % 2 ? '' : ''}`}>
+                <p className="">{job.about}</p>
               </div>
             </div>
           </div>

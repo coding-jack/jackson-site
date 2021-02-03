@@ -11,10 +11,10 @@ const GalleryProjects = () => {
 
   return (
     <div name="Portfolio" id="#Portfolio" className="flex-col min-h-screen p-20 text-left">
-      <h2 className="underline">{content[0].acf.sections.portfolio.header}</h2>
+      <h2 className="underline text-yellow">{content[0].acf.sections.portfolio.header}</h2>
       <p className="py-6">{content[0].acf.sections.portfolio.description}</p>
       <div className="wp-project-gallery pb-6">
-        <h3 className="pb-6">Wordpress</h3>
+        <h3 className="pb-6 text-yellow">Wordpress</h3>
         <div style={divStyle} className="gallery grid md:grid-cols-3 sm:grid-cols-2 gap-6 mb-3">
           {content[0].acf.sections.portfolio.wordpress
             .slice(0, 3)
@@ -37,7 +37,7 @@ const GalleryProjects = () => {
         </div>
       </div>
       <div className="js-project-gallery">
-        <h3 className="pb-6">Javascript</h3>
+        <h3 className="pb-6 text-yellow">Javascript</h3>
         <div style={divStyle} className="gallery grid md:grid-cols-3 sm:grid-cols-2 gap-6 mb-3">
           {content[0].acf.sections.portfolio.javascript
             .slice(0, 3)

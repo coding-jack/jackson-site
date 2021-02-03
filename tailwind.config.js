@@ -16,11 +16,12 @@ module.exports = {
         cyan: '#79d9ff',
         yellow: '#FFDB3A',
         purple: '#a072c1',
-        green: '#bfe685',
+        green: '#53bd37',
         violet: '#754cff',
         magenta: '#a93cff',
         red: '#FF3A5E',
         lime: '#80ff00',
+        gray: '#d4d0cb',
       },
       zIndex: {
         '-10': '-10'
