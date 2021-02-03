@@ -21,8 +21,8 @@ const DevPage = () => {
           <Hero />
           <GalleryProjects />
           <Experience />
-          <Education />
           <Skills />
+          <Education />
         </>
       }
     </Layout>
