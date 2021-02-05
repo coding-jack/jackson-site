@@ -8,10 +8,10 @@ const Experience = () => {
   return (
     <div name="Experience" id="#Experience" className="section min-h-screen flex-col p-4 md:p-20">
       <h2 className="min-w-full text-left underline text-yellow">{content[0].acf.sections.experience.header}</h2>
-      <p className="py-8 text-left">{content[0].acf.sections.experience.description}</p>
+      <p className="pt-8 text-left">{content[0].acf.sections.experience.description}</p>
       <div>
         {content[0].acf.sections.experience.jobs.map((job, index) =>
-          <div key={index} className={`py-16 ${index !== 0 ? 'border-top border-t-2 border-yellow' : ''}`}>
+          <div key={index} className={`py-16 ${index !== 0 ? 'border-top border-t-2 border-yellow' : ''}`} key={index}>
             <header className="header grid grid-flow-col grid-cols-2 gap-4 pb-6">
               <div className={`job-info ${index % 2 ? 'md:order-2 md:col-span-1 md:text-right' : 'md:col-span-1'}`}>
                 <h3 className="text-yellow inline-block">{job.company}</h3>
