@@ -6,7 +6,7 @@ const Experience = () => {
   const content = pages.filter((page) => page.slug === "dev")
 
   return (
-    <div name="Experience" id="#Experience" className="section min-h-screen flex-col">
+    <div name="Experience" id="#Experience" className="section min-h-screen flex-col p-4 md:p-20">
       <h2 className="min-w-full text-left underline text-yellow">{content[0].acf.sections.experience.header}</h2>
       <p className="py-8 text-left">{content[0].acf.sections.experience.description}</p>
       <div>
@@ -17,8 +17,8 @@ const Experience = () => {
                 <h3 className="text-lime">{job.company}</h3>
                 <h1 className="text-magenta">{job.title}</h1>
                 <p className="text-violet">{job.date_employed}</p>
-                <p className="text-cyan">{job.location}</p>
-                <p className="text-gray">{job.tech_used}</p>
+                <p className="text-gray">{job.location}</p>
+                <p className="text-cyan">{job.tech_used}</p>
               </div>
               <div className={`col-span-2 ${index % 2 ? '' : ''}`}>
                 <p className="">{job.about}</p>

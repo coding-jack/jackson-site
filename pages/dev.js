@@ -5,7 +5,7 @@ import Hero from "../components/dev/DevHero";
 import Experience from "../components/dev/Experience";
 import Education from "../components/dev/Education";
 import Skills from "../components/dev/Skills";
-import GalleryProjects from '../components/dev/GalleryProjects'
+import Portfolio from '../components/dev/Portfolio'
 import Header from "../components/Header"
 
 
@@ -19,7 +19,7 @@ const DevPage = () => {
         <>
           <Header />
           <Hero />
-          <GalleryProjects />
+          <Portfolio />
           <Experience />
           <Skills />
           <Education />

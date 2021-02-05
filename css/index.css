@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;700&display=swap');
 @import "./pages/dev.css";
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,11 +16,11 @@ html {
 }
 
 .section {
-  @apply flex items-center min-h-screen p-20
+  @apply flex items-center min-h-screen
 }
 
 .hero {
-  @apply min-h-screen p-20
+  @apply min-h-screen
 }
 
 .inset-text {
@@ -101,6 +100,10 @@ body .music-bg {
   background-color: blue;
 }
 
+.img-wrap {
+  max-width: 400px;
+}
+
 .photo-wrap:hover .gallery-photo {
   filter: blur(5px);
   transform: scale(.95);
@@ -130,4 +133,12 @@ body .music-bg {
   transform: scale(0.9);
   filter: blur(0);
   box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 15px;
+}
+
+.slick-track {
+  max-width: 1000px !important;
+}
+
+.slick-slide {
+  max-width: 20px !important;
 }

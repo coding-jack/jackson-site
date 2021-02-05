@@ -4,46 +4,24 @@ import { useStore, connect } from 'react-redux'
 const Skills = () => {
   const { pages } = useStore().getState().wp
   const content = pages.filter((page) => page.slug === "dev")
-  const settings = {
-    dots: true,
-    infinite: true,
-    autoplay: true,
-    speed: 500,
-    arrows: false,
-    pauseOnFocus: true,
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    className: 'hover-gradient',
-    responsive: [
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  }
 
   return (
-    <div name="Skills" id="#Skills" className="section flex-col text-center">
-      <div className="text-box my-12">
-        <h2 className="pl-12 text-left">{content[0].acf.sections.skills.header}</h2>
-        <p className="p-12 text-left">{content[0].acf.sections.skills.description}</p>
+    <div name="Skills" id="#Skills" className="section flex-col text-center p-4 md:p-20">
+      <div className="text-box">
+        <h2 className="md:text-left text-yellow underline">{content[0].acf.sections.skills.header}</h2>
+        <p className="md:text-left py-8">{content[0].acf.sections.skills.description}</p>
       </div>
       <ul>
         {content[0].acf.sections.skills.skill_sets.map((skill_set, index) =>
-          <li className="py-6" key={index}>
-            <h3>{skill_set.title}</h3>
-            <div className="flex flex-row justify-center">
-              {/* <Slider {...skillsSettings}> */}
+          <li className="py-8" key={skill_set.title.replace(/\s/g, '')} index={skill_set.title.replace(/\s/g, '')}>
+            <h3 className="text-yellow pb-4">{skill_set.title}</h3>
+            <ul className="list-none">
               {skill_set.skills.map((skill, index) =>
-                <div className="mx-4 skill-slide" key={index} index={index}>
+                <li className="mx-4 skill-slide inline-block" key={skill.skill.replace(/\s/g, '')} index={skill.skill.replace(/\s/g, '')}>
                   <p>{skill.skill}</p>
-                </div>
+                </li>
               )}
-              {/* </Slider> */}
-            </div>
+            </ul>
           </li>
         )}
       </ul>
