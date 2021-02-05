@@ -11,3 +11,9 @@
     min-height: 200px;
   }
 }
+
+@media (min-width: 1250px) {
+.gallery-photo {
+    min-height: 300px;
+  }
+}

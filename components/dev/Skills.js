@@ -13,8 +13,8 @@ const Skills = () => {
       </div>
       <ul>
         {content[0].acf.sections.skills.skill_sets.map((skill_set, index) =>
-          <li className="py-8" key={skill_set.title.replace(/\s/g, '')} index={skill_set.title.replace(/\s/g, '')}>
-            <h3 className="text-yellow pb-4">{skill_set.title}</h3>
+          <li className="py-4" key={skill_set.title.replace(/\s/g, '')} index={skill_set.title.replace(/\s/g, '')}>
+            <h3 className="text-yellow pb-2">{skill_set.title}</h3>
             <ul className="list-none">
               {skill_set.skills.map((skill, index) =>
                 <li className="mx-4 skill-slide inline-block" key={skill.skill.replace(/\s/g, '')} index={skill.skill.replace(/\s/g, '')}>

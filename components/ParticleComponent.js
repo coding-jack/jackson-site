@@ -9,14 +9,14 @@ function ParticleComponent() {
         params={{
           particles: {
             number: {
-              value: 2,
+              value: 4,
               density: {
                 enable: true,
                 value_area: 600
               }
             },
             color: {
-              value: '#05CAFF'
+              value: '#FFDB3A'
             },
             shape: {
               type: 'circle',
