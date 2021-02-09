@@ -7,21 +7,21 @@ const Education = () => {
 
   return (
     <div name="Education" id="#Education" className="section flex-col p-4 md:p-20">
-      <h2 className="text-left min-w-full underline text-yellow">{content[0].acf.sections.education.header}</h2>
+      <h2 className="text-left min-w-full underline text-primary font-black">{content[0].acf.sections.education.header}</h2>
       <p className="text-left pt-8">{content[0].acf.sections.education.description}</p>
       {content[0].acf.sections.education.schools.map((school, index) =>
-        <div className={`py-16 ${index !== 0 ? 'border-top border-t-2 border-yellow' : ''}`} key={index}>
+        <div className={`py-16 ${index !== 0 ? 'border-top border-t-2 border-primary' : ''}`} key={index}>
           <header className="header grid grid-flow-col grid-cols-3 gap-4 pb-6">
-            <div className={`job-info md:col-span-2 ${index % 2 ? 'md:order-2 md:text-right' : ''}`}>
-              <h3 className="text-yellow">{school.name}</h3>
+            <div className="job-info md:col-span-2">
+              <h3 className="text-primary font-black">{school.name}</h3>
               <p className="">{school.location}</p>
             </div>
-            <div className={`enrollment-dates md:col-span-1 ${index % 2 ? '' : 'md:order-2 md:text-right'}`}>
-              <p className="text-yellow">{school.date}</p>
+            <div className="enrollment-dates md:col-span-1 md:order-2 md:text-right">
+              <p className="text-primary font-black">{school.date}</p>
             </div>
           </header>
-          <p className="pb-2"><span className="text-yellow">Certification: </span>{school.certification}</p>
-          <p><span className="text-yellow">Summary: </span>{school.description}</p>
+          <p className="pb-2"><span className="text-primary font-black">Certification: </span>{school.certification}</p>
+          <p><span className="text-primary font-black">Summary: </span>{school.description}</p>
         </div>
       )}
     </div>
