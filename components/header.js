@@ -63,7 +63,7 @@ function Header() {
                       {Object.values(content[0].acf.sections).map((section) =>
                         <div className="px-3" key={section.header}>
                           <Link href={`#${removeSpace(section.header)}`}>
-                            <a className="text-yellow">{section.header}</a>
+                            <a className="text-red">{section.header}</a>
                           </Link>
                         </div>
                       )}
