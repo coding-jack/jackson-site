@@ -21,8 +21,8 @@ export default function Home() {
       <ParticleComponent />
       <main className="flex flex-col items-center h-screen">
         <h1 className="hello pt-5">Hello</h1>
-        <h1 className="heading-1 text-4xl mt-0">which body of work</h1>
-        <h1 className="heading-2 text-4xl mt-0">would you like to explore..?</h1>
+        <h1 className="heading-1 text-2xl md:text-4xl mt-0">which body of work</h1>
+        <h1 className="heading-2 text-2xl md:text-4xl mt-0">would you like to explore..?</h1>
         <div className="mx-6 flex flex-col">
           <Link href="/dev" className="dev-link relative z-10">
             <a className="card mt-40 relative z-10"
@@ -30,7 +30,7 @@ export default function Home() {
               onMouseLeave={removeBgClass}
             >
               <h3>Dev Work &rarr;</h3>
-              <p>Explore Jackson's web development resume and portfolio</p>
+              <p className="dev-text">Explore Jackson's web development resume and portfolio</p>
             </a>
           </Link>
         </div>
@@ -41,7 +41,7 @@ export default function Home() {
               onMouseLeave={removeBgClass}
             >
               <h3>Music &rarr;</h3>
-              <p>See what Jackson has been up to musically</p>
+              <p className="music-text">See what Jackson has been up to musically</p>
             </a>
           </Link>
         </div>

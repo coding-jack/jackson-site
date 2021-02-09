@@ -1,39 +1,21 @@
 import React from 'react'
-import { useStore, connect } from "react-redux";
-import Header from "../components/Header";
-import Layout from "../components/Layout";
-import MusicAbout from "../components/music/MusicAbout";
-import PsychRock from "../components/music/PsychRock";
-import Goofball from "../components/music/Goofball";
-import BoogieFunk from "../components/music/BoogieFunk";
-import SideProjects from "../components/music/SideProjects";
-import PhotoGallery from "../components/music/PhotoGallery";
+import Link from 'next/link'
 
 const MusicPage = () => {
-  const { pages } = useStore().getState().wp
-  const content = pages.filter((page) => page.slug === "music")
-
   return (
-    <Layout className="music">
-      {content[0] &&
-        <>
-          <Header />
-          <MusicAbout />
-          <PsychRock />
-          <Goofball />
-          <BoogieFunk />
-          <SideProjects />
-          <PhotoGallery />
-        </>
-      }
-    </Layout >
+    <div className="flex flex-col justify-center items-center min-h-screen">
+      <h3 className="text-center pb-8">This site is under construction still....</h3>
+      <Link href="/" className="hover:text-primary">
+        Go back to the landing page  &rarr;
+      </Link>
+    </div >
   )
 }
 
-const mapStateToProps = (state) => ({
-  pages: state.wp.pages,
-})
+// const mapStateToProps = (state) => ({
+//   pages: state.wp.pages,
+// })
 
-const Container = connect(mapStateToProps)(MusicPage);
+// const Container = connect(mapStateToProps)(MusicPage);
 
-export default Container;
+export default MusicPage;

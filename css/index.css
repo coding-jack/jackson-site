@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Inconsolata', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  @apply bg-black text-red
+  @apply bg-black text-gray
 }
 
 html {
@@ -52,44 +52,81 @@ h3 {
   display: none;
 }
 
+.card:hover  {
+  transition: ease-in-out;
+  transition-duration: 500ms;
+  color: #f70d7d;
+}
+
 .card:hover p {
   display: block;
-  animation: animated-text 2s steps(29,end) 0.01s 1 normal both;
   white-space: nowrap;
   overflow: hidden;
 }
 
+.card:hover p.dev-text {
+  animation: animated-dev 2s steps(29,end) 0.01s 1 normal both;
+}
+
+.card:hover p.music-text {
+  animation: animated-music 2s steps(29,end) 0.01s 1 normal both;
+}
+
+@keyframes animated-dev{
+  from{width: 0;}
+  to{width: 435px;}
+}
+
+@keyframes animated-music{
+  from{width: 0;}
+  to{width: 330px;}
+}
+
 .hello {
-  animation: animated-hello 0.25s steps(29,end) 1s 1 normal both;
+  animation: animated-hello 0.35s steps(29,end) 1s 1 normal both;
   white-space: nowrap;
   overflow: hidden;
 }
 
 @keyframes animated-hello{
   from{width: 0;}
-  to{width: 50px;}
+  to{width: 45px;}
 }
 
 .heading-1 {
-  animation: animated-text-1 2s steps(29,end) 2s 1 normal both;
+  animation: animated-heading-1 1.2s steps(29,end) 2s 1 normal both;
   white-space: nowrap;
   overflow: hidden;
 }
 
-@keyframes animated-text-1{
+.heading-2 {
+  animation: animated-heading-2 2s steps(29,end) 4s 1 normal both;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes animated-heading-1{
   from{width: 0;}
   to{width: 330px;}
 }
 
-.heading-2 {
-  animation: animated-text 2s steps(29,end) 4s 1 normal both;
-  white-space: nowrap;
-  overflow: hidden;
+@keyframes animated-heading-2{
+  from{width: 0;}
+  to{width: 505px;}
 }
 
-@keyframes animated-text{
-  from{width: 0;}
-  to{width: 510px;}
+@media (max-width: 535px) {
+  @keyframes animated-heading-1{
+    from{width: 0;}
+    to{width: 220px;}
+  }
+}
+
+@media (max-width: 535px) {
+  @keyframes animated-heading-2{
+    from{width: 0;}
+    to{width: 335px;}
+  }
 }
 
 body .dev-bg {

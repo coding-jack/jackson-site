@@ -22,6 +22,7 @@ module.exports = {
         red: '#FF3A5E',
         lime: '#80ff00',
         gray: '#d4d0cb',
+        black: '#131313',
       },
       zIndex: {
         '-10': '-10'

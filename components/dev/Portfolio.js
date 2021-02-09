@@ -14,7 +14,8 @@ const Portfolio = () => {
       <h2 className="underline text-yellow">{content[0].acf.sections.portfolio.header}</h2>
       <p className="py-8">{content[0].acf.sections.portfolio.description}</p>
       <div className="wp-project-gallery pb-6">
-        <h3 className="pb-6 text-yellow">Wordpress</h3>
+        <h3 className="pb-6 text-yellow inline-block">Wordpress</h3>
+        <p className="inline-block text-yellow pl-4"> &rarr;</p>
         <div style={divStyle} className="gallery grid md:grid-cols-3 sm:grid-cols-2 gap-6 mb-3">
           {content[0].acf.sections.portfolio.wordpress
             .slice(0, 3)
@@ -31,13 +32,14 @@ const Portfolio = () => {
             )}
           {/* {selectedId && (
             <div layoutId={selectedIdentifier}>
-              <button onClick={() => setSelectedId(null)} />
+            <button onClick={() => setSelectedId(null)} />
             </div>
           )} */}
         </div>
       </div>
       <div className="js-project-gallery">
-        <h3 className="pb-6 text-yellow">Javascript</h3>
+        <h3 className="pb-6 text-yellow inline-block">Javascript</h3>
+        <p className="inline-block text-yellow pl-4"> &rarr;</p>
         <div style={divStyle} className="gallery grid md:grid-cols-3 sm:grid-cols-2 gap-6 mb-3">
           {content[0].acf.sections.portfolio.javascript
             .slice(0, 3)
