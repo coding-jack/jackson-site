@@ -27,7 +27,7 @@ const Portfolio = () => {
                   style={{ backgroundImage: `url('${project.image.url}')` }}
                   alt={project.image.alt}
                 />
-                <button>{project.image.title} »</button>
+                <button className="font-black">{project.image.title} »</button>
               </a>
             )}
           {/* {selectedId && (
@@ -51,7 +51,7 @@ const Portfolio = () => {
                   style={{ backgroundImage: `url('${project.image.url}')` }}
                   alt={project.image.alt}
                 />
-                <button>{project.image.title} »</button>
+                <button className="font-black">{project.image.title} »</button>
               </a>
             )}
           {/* {selectedId && (

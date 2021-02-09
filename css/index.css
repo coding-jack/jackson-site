@@ -29,7 +29,7 @@ html {
 }
 
 .hover-image {
-  border: 2px solid #FF3A5E !important;
+  border: 2px solid #b93636 !important;
 }
 
 h2 {
@@ -160,9 +160,9 @@ body .music-bg {
   transition: all .5s ease-in-out;
   box-shadow: 0 0 15px rgba(0,0,0,.8);
   filter: blur(15px);
-  background-color: #FFDB3A;
-  border-color: #225389;
-  color: rgb(61, 9, 9);
+  background-color: #b93636;
+  border-color: #b93636;
+  @apply text-black;
 }
 
 .gallery .photo-wrap:hover button {
