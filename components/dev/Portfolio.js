@@ -11,11 +11,11 @@ const Portfolio = () => {
 
   return (
     <div name="Portfolio" id="#Portfolio" className="flex-col min-h-screen p-4 md:p-20 text-left">
-      <h2 className="underline text-red">{content[0].acf.sections.portfolio.header}</h2>
+      <h2 className="underline text-primary">{content[0].acf.sections.portfolio.header}</h2>
       <p className="py-8">{content[0].acf.sections.portfolio.description}</p>
       <div className="wp-project-gallery pb-6">
-        <h3 className="pb-6 text-red inline-block">Wordpress</h3>
-        <p className="inline-block text-red pl-4"> &rarr;</p>
+        <h3 className="pb-6 text-primary inline-block">Wordpress</h3>
+        <p className="inline-block text-primary pl-4"> &rarr;</p>
         <div style={divStyle} className="gallery grid md:grid-cols-3 sm:grid-cols-2 gap-6 mb-3">
           {content[0].acf.sections.portfolio.wordpress
             .slice(0, 3)
@@ -23,7 +23,7 @@ const Portfolio = () => {
               <a className="relative photo-wrap" target="_blank" key={project.link} href={project.link}>
                 <div
                   key={index}
-                  className={`gallery-photo rounded-lg border border-red bg-top bg-cover cursor-pointer relative hover:opacity-50 duration-500 ${index === 2 ? 'sm:hidden md:block' : ''}`}
+                  className={`gallery-photo rounded-lg border border-primary bg-top bg-cover cursor-pointer relative hover:opacity-50 duration-500 ${index === 2 ? 'sm:hidden md:block' : ''}`}
                   style={{ backgroundImage: `url('${project.image.url}')` }}
                   alt={project.image.alt}
                 />
@@ -38,8 +38,8 @@ const Portfolio = () => {
         </div>
       </div>
       <div className="js-project-gallery">
-        <h3 className="pb-6 text-red inline-block">Javascript</h3>
-        <p className="inline-block text-red pl-4"> &rarr;</p>
+        <h3 className="pb-6 text-primary inline-block">Javascript</h3>
+        <p className="inline-block text-primary pl-4"> &rarr;</p>
         <div style={divStyle} className="gallery grid md:grid-cols-3 sm:grid-cols-2 gap-6 mb-3">
           {content[0].acf.sections.portfolio.javascript
             .slice(0, 3)
@@ -47,7 +47,7 @@ const Portfolio = () => {
               <a className="relative photo-wrap" target="_blank" key={project.link} href={project.link}>
                 <div
                   key={index}
-                  className={`gallery-photo rounded-lg border border-red bg-top bg-cover cursor-pointer hover:opacity-50 duration-500 ${index === 2 ? 'sm:hidden md:block' : ''}`}
+                  className={`gallery-photo rounded-lg border border-primary bg-top bg-cover cursor-pointer hover:opacity-50 duration-500 ${index === 2 ? 'sm:hidden md:block' : ''}`}
                   style={{ backgroundImage: `url('${project.image.url}')` }}
                   alt={project.image.alt}
                 />
