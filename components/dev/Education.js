@@ -11,16 +11,16 @@ const Education = () => {
       <p className="text-left pt-8">{content[0].acf.sections.education.description}</p>
       {content[0].acf.sections.education.schools.map((school, index) =>
         <div className={`py-16 ${index !== 0 ? 'border-top border-t-2 border-primary' : ''}`} key={index}>
-          <header className="header grid grid-flow-col grid-cols-3 gap-4 pb-6">
+          <div className="header md:grid grid-flow-col grid-cols-3 gap-4 md:pb-6">
             <div className="job-info md:col-span-2">
               <h3 className="text-primary font-black">{school.name}</h3>
               <p className="">{school.location}</p>
             </div>
-            <div className="enrollment-dates md:col-span-1 md:order-2 md:text-right">
+            <div className="py-4 md:py-0 enrollment-dates md:col-span-1 md:order-2 md:text-right">
               <p className="text-primary font-black">{school.date}</p>
             </div>
-          </header>
-          <p className="pb-2"><span className="text-primary font-black">Certification: </span>{school.certification}</p>
+          </div>
+          <p className="pb-4 md:pb-2"><span className="text-primary font-black">Certification: </span>{school.certification}</p>
           <p><span className="text-primary font-black">Summary: </span>{school.description}</p>
         </div>
       )}

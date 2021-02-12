@@ -12,13 +12,13 @@ const Experience = () => {
       <div>
         {content[0].acf.sections.experience.jobs.map((job, index) =>
           <div key={index} className={`py-16 ${index !== 0 ? 'border-top border-t-2 border-primary' : ''}`} key={index}>
-            <header className="header grid grid-flow-col grid-cols-2 gap-4 pb-6">
+            <header className="header sm:grid grid-flow-col grid-cols-2 gap-4 pb-6">
               <div className="job-info md:col-span-1">
                 <h3 className="text-primary inline-block font-black">{job.company}</h3>
-                <p className="md:inline-block md:pl-4">{job.location}</p>
+                <p className="inline-block pl-4">{job.location}</p>
                 <h3 className="text-primary font-black">{job.title}</h3>
               </div>
-              <div className="employment-dates md:order-2 md:col-span-1 md:text-right">
+              <div className="employment-datess md:order-2 md:col-span-1 pt-4 sm:pt-0 sm:text-right mt-auto">
                 <p className="text-primary font-black">{job.date_employed}</p>
                 <p className=""><span className="text-primary font-black">Tech Used: </span>{job.tech_used}</p>
               </div>
