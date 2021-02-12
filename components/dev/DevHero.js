@@ -24,7 +24,7 @@ const DevHero = () => {
               width={400}
               height={400}
             />
-            <p className="absolute inset-text text-center">{content[0].acf.featured_tagline}</p>
+            <p className="absolute inset-text text-center hidden sm:block">{content[0].acf.featured_tagline}</p>
           </div>
         </div>
       </div>

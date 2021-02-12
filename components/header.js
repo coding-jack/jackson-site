@@ -16,6 +16,10 @@ function Header() {
   function removeSpace(prop) {
     return prop.replace(/\s/g, '');
   }
+  function closeHeader() {
+    document.addEventListener('click');
+    return setIsOn(!isOn);
+  }
 
   return (
     // < !--This example requires Tailwind CSS v2.0 + -->
@@ -107,7 +111,7 @@ function Header() {
                       stroke="currentColor"
                       aria-hidden="true"
                     >
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                     {/* <!--
               Heroicon name: x
@@ -122,7 +126,7 @@ function Header() {
                       stroke="currentColor"
                       aria-hidden="true"
                     >
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </button>
                 </div>
@@ -142,7 +146,7 @@ function Header() {
                 {Object.values(content[0].acf.sections).map((section) =>
                   <div className="mx-3" key={section.header}>
                     <Link href={`#${removeSpace(section.header)}`}>
-                      <a className="text-primary">{section.header}</a>
+                      <a>{section.header}</a>
                     </Link>
                   </div>
                 )}

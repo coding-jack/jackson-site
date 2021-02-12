@@ -184,3 +184,8 @@ body .music-bg {
 .slick-slide {
   max-width: 20px !important;
 }
+
+.footer-icon {
+  max-width: 20px;
+  @apply inline-block mx-2
+}
