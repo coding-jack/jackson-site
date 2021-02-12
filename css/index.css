@@ -25,7 +25,6 @@ html {
 
 .inset-text {
   top: 40%;
-  @apply text-cyan
 }
 
 .hover-image {
