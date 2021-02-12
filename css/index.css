@@ -55,7 +55,7 @@ h3 {
 .card:hover  {
   transition: ease-in-out;
   transition-duration: 500ms;
-  color: #f70d7d;
+  /* color: #f70d7d; */
 }
 
 .card:hover p {
@@ -141,6 +141,12 @@ body .music-bg {
   max-width: 400px;
 }
 
+@media (max-width: 768px) {
+  .img-wrap {
+    max-width: 200px;
+  }
+}
+
 .photo-wrap:hover .gallery-photo {
   filter: blur(5px);
   transform: scale(.95);
@@ -160,8 +166,7 @@ body .music-bg {
   transition: all .5s ease-in-out;
   box-shadow: 0 0 15px rgba(0,0,0,.8);
   filter: blur(15px);
-  background-color: #b93636;
-  border-color: #b93636;
+  background-color: #FFDB3A;
   @apply text-black;
 }
 

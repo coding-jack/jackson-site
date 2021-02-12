@@ -16,28 +16,8 @@ function Header() {
   }
 
   return (
-    // <header className="flex justify-center fixed inset-x-0 top-0 bg-black bg-opacity-25">
-    //   {content[0] &&
-    //     <>
-    //       <ul className="flex justify-center">
-    //         <li className="mx-3">
-    //           <Link href="/">
-    //             <a>Home</a>
-    //           </Link>
-    //         </li>
-    //         {Object.values(content[0].acf.sections).map((section, index) =>
-    //           <li className="mx-3" key={index}>
-    //             <Link href={`#${removeSpace(section.header)}`}>
-    //               <a>{section.header}</a>
-    //             </Link>
-    //           </li>
-    //         )}
-    //       </ul>
-    //     </>
-    //   }
-    // </header>
     // < !--This example requires Tailwind CSS v2.0 + -->
-    <header className="fixed w-full z-20">
+    <header className={`fixed w-full z-20 ${router.pathname === '/music' ? 'hidden' : ''}`}>
       {content[0] &&
         <>
           <div className="bg-black md:bg-opacity-50">

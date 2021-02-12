@@ -13,7 +13,7 @@ export default function Home() {
     console.log('removeClass');
   }
   return (
-    <div>
+    <div className="text-primary">
       <Head>
         <title>Jackson Kaufman</title>
         <link rel="icon" href="/favicon.ico" />
@@ -25,7 +25,7 @@ export default function Home() {
         <h1 className="heading-2 text-2xl md:text-4xl mt-0">would you like to explore..?</h1>
         <div className="mx-6 flex flex-col">
           <Link href="/dev" className="dev-link relative z-10">
-            <a className="card mt-40 relative z-10"
+            <a className="card mt-40 relative z-10 hover:text-cyan"
               onMouseEnter={addBgClass}
               onMouseLeave={removeBgClass}
             >
@@ -36,7 +36,7 @@ export default function Home() {
         </div>
         <div className="mt-auto mb-20">
           <Link href="/music" className="music-link relative z-10">
-            <a className="card inline-block relative z-10"
+            <a className="card inline-block relative z-10 hover:text-cyan"
               onMouseEnter={addBgClass}
               onMouseLeave={removeBgClass}
             >
@@ -46,8 +46,8 @@ export default function Home() {
           </Link>
         </div>
         <footer className="mt-auto">
-          Developed by Jackson Kaufman
-      </footer>
+          <p>Developed by Jackson Kaufman</p>
+        </footer>
       </main>
     </div >
   )
