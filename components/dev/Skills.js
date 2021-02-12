@@ -9,7 +9,8 @@ const Skills = () => {
   }
 
   return (
-    <div name="Skills" id="#Skills" className="flex-col p-4 md:p-20">
+    <div className="flex-col p-4 md:px-20 md:pt-20 relative">
+      <div className="nav-marker" name="Skills" id="#Skills"></div>
       <div className="text-box">
         <h2 className="md:text-left text-primary underline font-black">{content[0].acf.sections.skills.header}</h2>
         <p className="md:text-left py-8">{content[0].acf.sections.skills.description}</p>

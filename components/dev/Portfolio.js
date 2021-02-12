@@ -10,7 +10,8 @@ const Portfolio = () => {
   const [selectedId, setSelectedId] = useState(null)
 
   return (
-    <div name="Portfolio" id="#Portfolio" className="flex-col min-h-screen p-4 md:p-20 text-left">
+    <div className="flex-col min-h-screen p-4 md:pt-20 md:px-20 text-left relative">
+      <div className="nav-marker" id="#Portfolio" name="Portfolio"></div>
       <h2 className="underline text-primary font-black">{content[0].acf.sections.portfolio.header}</h2>
       <p className="py-8">{content[0].acf.sections.portfolio.description}</p>
       <div className="wp-project-gallery pb-6">
