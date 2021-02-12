@@ -11,7 +11,7 @@ const DevHero = () => {
 
   return (
     <div className="hero relative p-4 md:p-20" style={heroBgStyle}>
-      <h3 className="pt-20 text-primary">I like to create slick UI's</h3>
+      <h3 className="pt-20 text-primary">I like to paint slick UI's</h3>
       <h3 className="text-primary">with modern tech.</h3>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 relative bottom-0 mt-64 md:mt-48">
         <div className="md:col-span-2"></div>

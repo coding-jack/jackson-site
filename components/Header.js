@@ -4,6 +4,8 @@ import { useStore, connect } from "react-redux";
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+import { faTerminal } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Header() {
   useGetWPPages();
@@ -23,17 +25,10 @@ function Header() {
           <div className="bg-black md:bg-opacity-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex items-center justify-between h-16">
-                <div className="flex-shrink-0">
+                <div className="flex-shrink-0 home-button-wrapper">
                   <Link href="/">
-                    <a className="rotate-90">
-                      {/* <img className="home-button h-8 w-8" src="/images/Prismatic-Guitar.svg" alt="Workflow" /> */}
-                      <Image
-                        className="rotate-90 h-8 w-8 home-button"
-                        src="/images/guitare_elec.svg"
-                        alt="Home"
-                        width={60}
-                        height={60}
-                      />
+                    <a>
+                      <FontAwesomeIcon className="text-primary text-4xl" icon={faTerminal} />
                     </a>
                   </Link>
                 </div>
@@ -64,7 +59,7 @@ function Header() {
                           onClick={() => setIsOn(!isOn)}
                         >
                           <span className="sr-only">Open user menu</span>
-                          <img className="h-8 w-8 rounded-full" src="/images/ResumePic.jpg" alt="" />
+                          <img className="h-10 w-10 rounded-full" src="/images/ResumePic.jpg" alt="" />
                         </button>
                       </div>
                       {/* <!--
@@ -147,19 +142,19 @@ function Header() {
                 {Object.values(content[0].acf.sections).map((section) =>
                   <div className="mx-3" key={section.header}>
                     <Link href={`#${removeSpace(section.header)}`}>
-                      <a>{section.header}</a>
+                      <a className="text-primary">{section.header}</a>
                     </Link>
                   </div>
                 )}
               </div>
-              <div className="pt-4 pb-3 border-t border-gray-700">
+              <div className="pt-4 pb-3 border-t border-primary">
                 <div className="flex items-center px-5">
                   <div className="flex-shrink-0">
                     <img className="h-10 w-10 rounded-full" src="/images/ResumePic.jpg" alt="" />
                   </div>
                   <div className="ml-3">
-                    <div className="text-base font-medium leading-none text-white">Jackson Kaufman</div>
-                    <div className="text-sm font-medium leading-none text-gray-400 mt-2">Web Developer</div>
+                    <div className="text-base font-medium leading-none text-gray">Jackson Kaufman</div>
+                    <div className="text-sm font-medium leading-none text-primary mt-2">Web Developer</div>
                   </div>
                 </div>
                 <div className="mt-3 px-2 space-y-1">

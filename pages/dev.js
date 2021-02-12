@@ -7,6 +7,7 @@ import Education from "../components/dev/Education";
 import Skills from "../components/dev/Skills";
 import Portfolio from '../components/dev/Portfolio'
 import Header from "../components/Header"
+import Footer from "../components/Footer"
 
 
 const DevPage = () => {
@@ -23,6 +24,7 @@ const DevPage = () => {
           <Experience />
           <Skills />
           <Education />
+          <Footer />
         </>
       }
     </Layout>

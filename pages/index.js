@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import ParticleComponent from '../components/ParticleComponent'
 
@@ -25,7 +24,7 @@ export default function Home() {
         <h1 className="heading-2 text-2xl md:text-4xl mt-0">would you like to explore..?</h1>
         <div className="mx-6 flex flex-col">
           <Link href="/dev" className="dev-link relative z-10">
-            <a className="card mt-40 relative z-10 hover:text-cyan"
+            <a className="card mt-40 relative z-10 hover:text-yellow"
               onMouseEnter={addBgClass}
               onMouseLeave={removeBgClass}
             >
@@ -36,7 +35,7 @@ export default function Home() {
         </div>
         <div className="mt-auto mb-20">
           <Link href="/music" className="music-link relative z-10">
-            <a className="card inline-block relative z-10 hover:text-cyan"
+            <a className="card inline-block relative z-10 hover:text-yellow"
               onMouseEnter={addBgClass}
               onMouseLeave={removeBgClass}
             >
@@ -45,9 +44,9 @@ export default function Home() {
             </a>
           </Link>
         </div>
-        <footer className="mt-auto">
+        <div className="mt-auto mb-4">
           <p>Developed by Jackson Kaufman</p>
-        </footer>
+        </div>
       </main>
     </div >
   )

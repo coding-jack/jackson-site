@@ -17,3 +17,7 @@
     min-height: 300px;
   }
 }
+
+.home-button-wrapper {
+  max-width: 36px;
+}
