@@ -6,7 +6,7 @@ const Education = () => {
   const content = pages.filter((page) => page.slug === "dev")
 
   return (
-    <div className="section flex-col p-4 md:p-20 relative">
+    <div className="section flex-col p-4 md:px-20 md:pt-20 relative">
       <div className="nav-marker" name="Education" id="#Education"></div>
       <h2 className="text-left min-w-full underline text-primary font-black">{content[0].acf.sections.education.header}</h2>
       <p className="text-left pt-8">{content[0].acf.sections.education.description}</p>
