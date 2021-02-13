@@ -1,6 +1,5 @@
 import React from 'react'
 import { useStore, connect } from "react-redux";
-import Image from 'next/image'
 
 const DevHero = () => {
   const { pages } = useStore().getState().wp
@@ -17,14 +16,14 @@ const DevHero = () => {
         <div className="md:col-span-2"></div>
         <div className="col-span-1">
           <div className="img-wrap rounded-full relative rounded-full ml-auto">
-            <Image
-              className="hover-image z-10 hover:opacity-0 duration-500 rounded-full border-opacity-100 border-primary border-2"
+            <img
+              className="hover-image relative z-20 hover:opacity-0 duration-500 rounded-full border-opacity-100 border-primary border-2"
               src={content[0].acf.featured_picture.url}
               alt={content[0].acf.featured_picture.alt}
-              width={400}
-              height={400}
+            // width={400}
+            // height={400}
             />
-            <p className="absolute inset-text text-center hidden sm:block text-yellow">{content[0].acf.featured_tagline}</p>
+            <p className="absolute inset-text text-center hidden sm:block text-yellow z-10">{content[0].acf.featured_tagline}</p>
           </div>
         </div>
       </div>
