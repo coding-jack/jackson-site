@@ -15,7 +15,9 @@ const Experience = () => {
           <div key={index} className={`py-16 ${index !== 0 ? 'border-top border-t-2 border-primary' : ''}`} key={index}>
             <header className="header sm:grid grid-flow-col grid-cols-2 gap-4 pb-6">
               <div className="job-info md:col-span-1">
-                <h3 className="text-primary inline-block font-bold">{job.company}</h3>
+                <h3 className="text-primary inline-block font-bold cursor-pointer">
+                  <a href={job.link} target="_blank">{job.company}</a>
+                </h3>
                 <p className="inline-block pl-4">{job.location}</p>
                 <h3 className="text-primary font-bold">{job.title}</h3>
               </div>

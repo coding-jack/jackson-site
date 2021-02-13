@@ -14,7 +14,9 @@ const Education = () => {
         <div className={`py-16 ${index !== 0 ? 'border-top border-t-2 border-primary' : ''}`} key={index}>
           <div className="header md:grid grid-flow-col grid-cols-3 gap-4 md:pb-6">
             <div className="job-info md:col-span-2">
-              <h3 className="text-primary font-bold">{school.name}</h3>
+              <h3 className="text-primary font-bold cursor-pointer">
+                <a href={school.link} target="_blank">{school.name}</a>
+              </h3>
               <p className="">{school.location}</p>
             </div>
             <div className="py-4 md:py-0 enrollment-dates md:col-span-1 md:order-2 md:text-right">

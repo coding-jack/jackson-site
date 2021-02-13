@@ -11,6 +11,11 @@ body {
   @apply bg-black text-gray
 }
 
+a:hover {
+  color: yellow;
+  transition: all ease-in-out 200ms;
+}
+
 html {
   scroll-behavior: smooth;
 }
