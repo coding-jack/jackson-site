@@ -12,10 +12,10 @@ const Portfolio = () => {
   return (
     <div className="flex-col min-h-screen p-4 md:pt-20 md:px-20 text-left relative">
       <div className="nav-marker" id="#Portfolio" name="Portfolio"></div>
-      <h2 className="underline text-primary font-black">{content[0].acf.sections.portfolio.header}</h2>
+      <h2 className="text-primary font-black">{content[0].acf.sections.portfolio.header}</h2>
       <p className="py-8">{content[0].acf.sections.portfolio.description}</p>
       <div className="wp-project-gallery pb-6">
-        <h3 className="pb-6 text-primary inline-block font-black">Wordpress</h3>
+        <h3 className="pb-6 text-primary inline-block font-bold">Wordpress</h3>
         <p className="inline-block text-primary pl-4"> &rarr;</p>
         <div style={divStyle} className="gallery grid md:grid-cols-3 sm:grid-cols-2 gap-6 mb-3">
           {content[0].acf.sections.portfolio.wordpress
@@ -39,7 +39,7 @@ const Portfolio = () => {
         </div>
       </div>
       <div className="js-project-gallery">
-        <h3 className="pb-6 text-primary inline-block font-black">Javascript</h3>
+        <h3 className="pb-6 text-primary inline-block font-bold">Javascript</h3>
         <p className="inline-block text-primary pl-4"> &rarr;</p>
         <div style={divStyle} className="gallery grid md:grid-cols-3 sm:grid-cols-2 gap-6 mb-3">
           {content[0].acf.sections.portfolio.javascript
