@@ -3,7 +3,6 @@ import useGetWPPages from '../hooks/useGetWPPages';
 import { useStore, connect } from "react-redux";
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import Image from 'next/image'
 import { faTerminal } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
