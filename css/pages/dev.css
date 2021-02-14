@@ -50,7 +50,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,.8);
   filter: blur(15px);
   background-color: #FFDB3A;
-  @apply text-black;
+  color: #131313;
 }
 
 .gallery .photo-wrap:hover button {
