@@ -6,7 +6,7 @@ const Experience = () => {
   const content = pages.filter((page) => page.slug === "dev")
 
   return (
-    <div className="section min-h-screen flex-col p-4 md:px-20 md:pt-20 relative">
+    <div className="section container min-h-screen flex-col p-4 md:px-20 md:pt-20 relative">
       <div className="nav-marker" id="#Experience" name="Experience"></div>
       <h2 className="min-w-full text-left text-primary font-black">{content[0].acf.sections.experience.header}</h2>
       <p className="pt-8 text-left">{content[0].acf.sections.experience.description}</p>

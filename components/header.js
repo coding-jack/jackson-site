@@ -22,7 +22,7 @@ function Header() {
 
   return (
     // < !--This example requires Tailwind CSS v2.0 + -->
-    <header className={`fixed w-full z-20 ${router.pathname === '/music' ? 'hidden' : ''}`}>
+    <header className={`fixed w-full z-30 ${router.pathname === '/music' ? 'hidden' : ''}`}>
       {content[0] &&
         <>
           <div className="bg-black md:bg-opacity-50">
