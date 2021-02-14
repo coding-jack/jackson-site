@@ -37,7 +37,7 @@ const Portfolio = () => {
       </div>
       <div className="js-project-gallery">
         <h3 className="pb-6 text-primary font-bold">Javascript</h3>
-        <div style={divStyle} className="gallery grid md:grid-cols-3 sm:grid-cols-2 gap-6 mb-3">
+        <div style={divStyle} className="gallery grid xl:grid-cols-3 sm:grid-cols-2 gap-6 mb-3">
           {content[0].acf.sections.portfolio.javascript
             .map((project, index) =>
               <div className="relative project-wrap">
