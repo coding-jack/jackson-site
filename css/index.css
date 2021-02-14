@@ -126,6 +126,10 @@ h3 {
   @apply inline-block mx-2
 }
 
+.header-icon {
+  max-width: 30px;
+}
+
 .nav-marker {
   position: absolute;
   top: -50px;
@@ -135,4 +139,8 @@ h3 {
   .nav-marker {
     top: 10px;
   }
+}
+
+.bg-header {
+  background-color: #131313 !important;
 }

@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { faTerminal } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 function Header() {
   useGetWPPages();
@@ -25,7 +27,7 @@ function Header() {
     <header className={`fixed w-full z-30 ${router.pathname === '/music' ? 'hidden' : ''}`}>
       {content[0] &&
         <>
-          <div className="bg-black md:bg-opacity-50">
+          <div className="bg-header md:bg-opacity-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex items-center justify-between h-16">
                 <div className="flex-shrink-0 home-button-wrapper">
@@ -79,9 +81,11 @@ function Header() {
                         role="menu"
                         aria-orientation="vertical"
                         aria-labelledby="user-menu"
-                        className={`transition ease-out duration-100 ${isOn ? 'transform opacity-100 block scale-100' : 'transform hidden scale-95'} origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5`}
+                        className={`transition ease-out duration-100 ${isOn ? 'transform opacity-100 block scale-100' : 'transform hidden scale-95'} absolute mt-2 max-w-max text-primary rounded-md shadow-lg py-1 text-center`}
                       >
-                        <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Your Profile</a>
+                        <a href="mailto:jacksonkaufman115@gmail.com" target="_blank"><FontAwesomeIcon className="footer-icon hover:text-yellow duration-200 mt-2 text-2xl" icon={faEnvelope} /></a>
+                        <a href="tel:3036531861" target="_blank"><FontAwesomeIcon className="footer-icon hover:text-yellow duration-200 mt-2 text-2xl" icon={faPhone} /></a>
+                        <a href="https://github.com/coding-jack" target="_blank"><FontAwesomeIcon className="footer-icon hover:text-yellow duration-200 mt-2 text-2xl" icon={faGithub} /></a>
                       </div>
                     </div>
                   </div>
@@ -138,30 +142,32 @@ function Header() {
       Open: "block", closed: "hidden"
     --> */}
             <div className={`${isOn ? 'block' : 'hidden'} md:hidden`}>
-              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              <div className="px-2 pt-2 pb-6 space-y-1 sm:px-3 text-primary">
                 {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
                 {/* <a href="#" className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">Dashboard</a> */}
 
                 {Object.values(content[0].acf.sections).map((section) =>
-                  <div className="mx-3" key={section.header}>
+                  <div className="mx-3 py-2" key={section.header}>
                     <Link href={`#${removeSpace(section.header)}`}>
-                      <a>{section.header}</a>
+                      <a className="text-2xl">{section.header}</a>
                     </Link>
                   </div>
                 )}
               </div>
-              <div className="pt-4 pb-3 border-t border-primary">
-                <div className="flex items-center px-5">
+              <div className="pt-4 py-3 border-t border-primary">
+                <div className="flex items-center px-5 pt-4">
                   <div className="flex-shrink-0">
-                    <img className="h-10 w-10 rounded-full" src="/images/ResumePic.jpg" alt="" />
+                    <img className="h-20 w-20 rounded-full" src="/images/ResumePic.jpg" alt="" />
                   </div>
                   <div className="ml-3">
-                    <div className="text-base font-medium leading-none text-gray">Jackson Kaufman</div>
-                    <div className="text-sm font-medium leading-none text-primary mt-2">Web Developer</div>
+                    <div className="text-2xl font-medium leading-none text-gray">Jackson Kaufman</div>
+                    <div className="text-xl font-medium leading-none text-primary mt-2">Web Developer</div>
                   </div>
                 </div>
-                <div className="mt-3 px-2 space-y-1">
-                  <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700">Your Profile</a>
+                <div className="mt-3 px-6 pt-4 my-4 text-primary flex justify-around items-end text-3xl">
+                  <a href="mailto:jacksonkaufman115@gmail.com" target="_blank"><FontAwesomeIcon className="header-icon hover:text-yellow duration-200 mt-2" icon={faEnvelope} /></a>
+                  <a href="tel:3036531861" target="_blank"><FontAwesomeIcon className="header-icon hover:text-yellow duration-200 mt-2" icon={faPhone} /></a>
+                  <a href="https://github.com/coding-jack" target="_blank"><FontAwesomeIcon className="header-icon hover:text-yellow duration-200 mt-2" icon={faGithub} /></a>
                 </div>
               </div>
             </div>
