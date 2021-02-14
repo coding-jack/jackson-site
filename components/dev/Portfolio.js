@@ -7,7 +7,6 @@ const Portfolio = () => {
   const divStyle = {
     minHeight: '180px',
   }
-  const [selectedId, setSelectedId] = useState(null)
 
   return (
     <div className="flex-col min-h-screen p-4 md:pt-20 md:px-20 text-left relative">
@@ -31,11 +30,6 @@ const Portfolio = () => {
                 <button className="font-black">{project.image.title} »</button>
               </a>
             )}
-          {/* {selectedId && (
-            <div layoutId={selectedIdentifier}>
-            <button onClick={() => setSelectedId(null)} />
-            </div>
-          )} */}
         </div>
       </div>
       <div className="js-project-gallery">
@@ -55,11 +49,6 @@ const Portfolio = () => {
                 <button className="font-black">{project.image.title} »</button>
               </a>
             )}
-          {/* {selectedId && (
-            <div layoutId={selectedIdentifier}>
-              <button onClick={() => setSelectedId(null)} />
-            </div>
-          )} */}
         </div>
       </div>
     </div>
