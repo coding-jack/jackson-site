@@ -17,10 +17,7 @@ function Header() {
   function removeSpace(prop) {
     return prop.replace(/\s/g, '');
   }
-  function closeHeader() {
-    document.addEventListener('click');
-    return setIsOn(!isOn);
-  }
+
 
   return (
     // < !--This example requires Tailwind CSS v2.0 + -->
@@ -174,7 +171,7 @@ function Header() {
           </div>
         </>
       }
-    </header>
+    </header >
   )
 }
 
