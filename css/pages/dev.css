@@ -49,8 +49,8 @@
   transition: all .5s ease-in-out;
   box-shadow: 0 0 15px rgba(0,0,0,.8);
   filter: blur(15px);
-  background-color: #FFDB3A;
-  color: #131313;
+  background-color: #FFDB3A !important;
+  color: #131313 !important;
 }
 
 .gallery .photo-wrap:hover button {

@@ -142,5 +142,11 @@ h3 {
 }
 
 .bg-header {
-  background-color: rgba(14, 15, 16, 0.5);
+  background-color: rgba(14, 15, 16);
+}
+
+@media (min-width: 768px) {
+  .bg-header {
+    background-color: rgba(14, 15, 16, 0.5);
+  }
 }
