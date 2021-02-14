@@ -10,7 +10,7 @@ const DevHero = () => {
 
   return (
     <div className="hero relative" style={heroBgStyle}>
-      <div className="container  p-4 md:p-20">
+      <div className="container p-4 md:p-20">
         <h3 className="pt-20 text-primary">I like to paint slick UI's</h3>
         <h3 className="text-primary">with modern tech.</h3>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 relative bottom-0 mt-64 md:mt-48">
