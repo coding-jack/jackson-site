@@ -9,7 +9,7 @@ const DevHero = () => {
   }
 
   return (
-    <div className="hero relative" style={heroBgStyle}>
+    <div className="hero relative min-h-screen" style={heroBgStyle}>
       <div className="container p-4 md:p-20">
         <h3 className="pt-20 text-primary">I like to paint slick UI's</h3>
         <h3 className="text-primary">with modern tech.</h3>
