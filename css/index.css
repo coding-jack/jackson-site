@@ -130,6 +130,10 @@ h3 {
   max-width: 30px;
 }
 
+.header-icon-open {
+  margin-left: 2px;
+}
+
 .nav-marker {
   position: absolute;
   top: -50px;

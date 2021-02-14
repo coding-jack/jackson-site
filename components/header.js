@@ -24,7 +24,7 @@ function Header() {
       {content[0] &&
         <>
           <div className="bg-header md:bg-opacity-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex items-center justify-between h-16">
                 <div className="flex-shrink-0 home-button-wrapper">
                   <Link href="/">
@@ -68,9 +68,9 @@ function Header() {
                         aria-labelledby="user-menu"
                         className={`transition ease-out duration-100 ${isOn ? 'transform opacity-100 block scale-100' : 'transform hidden scale-95'} absolute mt-2 max-w-max text-primary rounded-md shadow-lg py-1 text-center`}
                       >
-                        <a href="mailto:jacksonkaufman115@gmail.com" target="_blank"><FontAwesomeIcon className="footer-icon hover:text-yellow duration-200 mt-2 text-2xl" icon={faEnvelope} /></a>
-                        <a href="tel:3036531861" target="_blank"><FontAwesomeIcon className="footer-icon hover:text-yellow duration-200 mt-2 text-2xl" icon={faPhone} /></a>
-                        <a href="https://github.com/coding-jack" target="_blank"><FontAwesomeIcon className="footer-icon hover:text-yellow duration-200 mt-2 text-2xl" icon={faGithub} /></a>
+                        <a href="mailto:jacksonkaufman115@gmail.com" target="_blank"><FontAwesomeIcon className="header-icon-open hover:text-yellow duration-200 mt-1 text-2xl" icon={faEnvelope} /></a>
+                        <a href="tel:3036531861" target="_blank"><FontAwesomeIcon className="header-icon-open hover:text-yellow duration-200 mt-4 text-2xl" icon={faPhone} /></a>
+                        <a href="https://github.com/coding-jack" target="_blank"><FontAwesomeIcon className="header-icon-open hover:text-yellow duration-200 mt-4 text-2xl" icon={faGithub} /></a>
                       </div>
                     </div>
                   </div>
