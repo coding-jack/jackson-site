@@ -6,7 +6,8 @@ function Footer() {
   return (
     <footer className="container text-primary pb-5 md:px-20 md:py-10 text-center md:text-left">
       <div className="md:inline-block">
-        <p className="md:inline-block">Developed by Jackson Kaufman © 2021</p>
+        <p className="">This is a Headless CMS built with Next.js, WordPress, Redux and Tailwind.</p>
+        <p className="md:inline-block">It was developed by Jackson Kaufman © 2021</p>
         <p className="md:pl-6 md:inline-block">View the source code <a className="hover:text-yellow duration-200 cursor-pointer underline" href="https://github.com/coding-jack/jackson-site" target="_blank">here</a></p>
       </div>
       <div className="md:inline-block md:float-right mt-4 md:mt-0">
