@@ -50,7 +50,7 @@ const Portfolio = () => {
                   />
                   <button className="font-black">{project.image.title} »</button>
                 </a>
-                <p className="description-text p-2">{project.image.description}</p>
+                <div className="description-text p-2" dangerouslySetInnerHTML={{ __html: project.image.description }} />
               </div>
             )}
         </div>
