@@ -20,8 +20,8 @@ const DevPage = () => {
         <>
           <Header />
           <Hero />
-          <Portfolio />
           <Experience />
+          <Portfolio />
           <Skills />
           <Education />
           <Footer />
