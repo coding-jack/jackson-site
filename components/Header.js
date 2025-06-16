@@ -28,9 +28,7 @@ function Header() {
               <div className="flex items-center justify-between h-16">
                 <div className="flex-shrink-0 home-button-wrapper">
                   <Link href="/">
-                    <a>
                       <FontAwesomeIcon className="text-primary text-4xl" icon={faTerminal} />
-                    </a>
                   </Link>
                 </div>
                 <div className="flex items-center">
@@ -38,8 +36,8 @@ function Header() {
                     <div className="flex items-baseline space-x-4">
                       {Object.values(content[0].acf.sections).map((section) =>
                         <div className="px-3" key={section.header}>
-                          <Link href={`#${removeSpace(section.header)}`}>
-                            <a className="text-primary font-bold">{section.header}</a>
+                          <Link  className="text-primary font-bold" href={`#${removeSpace(section.header)}`}>
+                            {section.header}
                           </Link>
                         </div>
                       )}
@@ -110,8 +108,8 @@ function Header() {
               <div className="px-2 pt-2 pb-6 space-y-1 sm:px-3 text-primary">
                 {Object.values(content[0].acf.sections).map((section) =>
                   <div className="mx-3 py-2" key={section.header}>
-                    <Link href={`#${removeSpace(section.header)}`}>
-                      <a className="text-2xl">{section.header}</a>
+                    <Link className="text-2xl" href={`#${removeSpace(section.header)}`}>
+                      {section.header}
                     </Link>
                   </div>
                 )}

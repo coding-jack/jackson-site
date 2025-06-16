@@ -3,15 +3,10 @@ import { useDispatch } from "react-redux"
 import axios from 'axios'
 
 const importPages = async () => {
-  const apiUrl = `${process.env.NEXT_PUBLIC_WP_API_URL}/wp/v2/pages`
-  const pages = axios
-    .get(apiUrl)
-    .then((result) => {
-      return result.data
-    })
-
-  return pages
+  const response = await axios.get('/api/wp/pages');
+  return response.data;
 };
+
 
 export default function useGetWPPages() {
   const dispatch = useDispatch();
