@@ -1,8 +1,5 @@
-const { withNetlify } = require('@netlify/next');
-
-module.exports = withNetlify({
+module.exports = {
   images: {
     domains: ['wp.jacksonkaufman.com'],
   },
-  reactStrictMode: true,
-});
+}
