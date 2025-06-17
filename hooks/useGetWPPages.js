@@ -5,11 +5,13 @@ import axios from 'axios'
 const importPages = async () => {
   // if environment is development, use the local API
   if (process.env.NODE_ENV === 'development') {
+    console.log('Development environment detected, using local API');
     const response = await axios.get('/api/wp/pages');
     return response.data;
   }
   // if environment is production, use the remote API
   if (process.env.NODE_ENV === 'production') {
+    console.log('Production environment detected, using remote API');
     const apiUrl = `${process.env.NEXT_PUBLIC_WP_API_URL}/wp/v2/pages`
     const pages = axios
       .get(apiUrl)
